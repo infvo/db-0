@@ -61,9 +61,9 @@ Voor een web-toepassing: welke webpagina's heb je nodig, welke informatie bieden
 
 Een Entity-Relationship (E-R) model bestaat uit *entiteiten* met *attributen*, en *relaties* tussen deze entiteiten.
 
-Een entiteit is een "zelfstandig begrip" waarover je gegevens wilt vastleggen.
-Dit kan concreet zijn, zoals "Persoon" of "Auto".
-Het kan ook abstract zijn, zoals "Afspraak" of "Afdeling".
+Een entiteit is een *zelfstandig begrip* waarover je gegevens wilt vastleggen.
+Dit kan een concreet begrip zijn, zoals "Persoon" of "Auto".
+Het kan ook iets abstracts zijn, zoals "Afspraak" of "Afdeling".
 
 Een entiteit wordt beschreven door attributen;
 anders gezegd, een attribuut beschrijft een eigenschap van een entiteit.
@@ -98,7 +98,16 @@ Bij dit model kunnen we  de volgende constraints formuleren
     * iedere inschrijving heeft precies 1 lid
     * ieder lid heeft 0 of meer inschrijvingen
 
+Deze *multipliciteit* van de relatie wordt in de tekening weergegeven met behulp van "kraaiepoten": deze geven het minimum aantal ("0" of "1") en het maximum aantal ("1" of "meer") aan. Je kunt de kraaiepoot zien als een bijzonder soort pijlpunt.
+
 Bovendien zijn de attributen zijn allemaal enkelwaardig: dat wil zeggen, een lid heeft één lidnr, één voornaam, één achternaam, en één email-adres. Dit volgt uit de notatie: een meerwaardig attribuut heeft een dubbele rand.
+
+**Alternatieve notatie.** Hieronder vind je een alternatieve notatie voor hetzelfde E-R model.
+Deze laatste notatie ligt dichter bij de tabellen van een relationele database.
+Bovendien is deze notatie compacter, wat vooral voor een groot model handig is.
+
+
+![leden-inschrijvingen](leden-inschrijvingen-mysql.png)
 
 ### Constraints
 
@@ -164,8 +173,6 @@ In het bovenstaande model hebben we de inschrijvingen en de leden
 In het onderdeel Database design ga je met complexere voorbeelden aan de slag.
 Je zult merken dat je voor een realistisch voorbeeld meerdere entiteiten nodig hebt.
 Het maken van een goed E-R model wordt dan al snel veel lastiger.
-
-![leden-inschrijvingen](leden-inschrijvingen-mysql.png)
 
 ## Opmerkingen
 
