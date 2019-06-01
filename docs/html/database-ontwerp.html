@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Database-ontwerp &#8212; Databases-0 0.1 documentatie</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/accessibility.css?v=808B982A" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css?v=B9BAA0D1" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css?v=E220AC33" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css?v=2F3E13EE" />
+    <link rel="stylesheet" type="text/css" href="_static/js_lib/prettify.css?v=2A364B6B" />
+    <link rel="stylesheet" type="text/css" href="_static/reveal.css?v=4A81D381" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css?v=424F1CC9" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js?v=8329CA55"></script>
+    <script type="text/javascript" src="_static/timedmc.js?v=B010A457"></script>
+    <script type="text/javascript" src="_static/timed.js?v=6789FE30"></script>
+    <script type="text/javascript" src="_static/shortanswer.js?v=5EB6170D"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js?v=B3A117D7"></script>
+    <script type="text/javascript" src="_static/dragndrop.js?v=2B6403E8"></script>
+    <script type="text/javascript" src="_static/timeddnd.js?v=378F237E"></script>
+    <script type="text/javascript" src="_static/poll.js?v=6C59AE9F"></script>
+    <script type="text/javascript" src="_static/js_lib/prettify.js?v=CA7E8928"></script>
+    <script type="text/javascript" src="_static/js_lib/hammer.min.js?v=73056367"></script>
+    <script type="text/javascript" src="_static/parsons.js?v=93EFFF39"></script>
+    <script type="text/javascript" src="_static/timedparsons.js?v=2EEA9E5A"></script>
+    <script type="text/javascript" src="_static/reveal.js?v=112CBFA2"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js?v=5BE6106"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Zoeken" href="search.html" />
+    <link rel="next" title="NoSQL" href="nosql.html" />
+    <link rel="prev" title="Data in meerdere tabellen" href="data-in-meerdere-tabellen.html" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = '' ? '' : 'http://127.0.0.1:8000';
+/*
+  eBookConfig.app = eBookConfig.host+'/';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = '';
+  eBookConfig.logLevel = ;
+  eBookConfig.loginRequired = ;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = ;
+  eBookConfig.python3 = ;
+  eBookConfig.basecourse = '';
+  eBookConfig.runestone_version = '';
+*/
+</script>
+<script type="application/json" class="js-hypothesis-config">
+{
+"showHighlights": false
+}
+</script>
+<script async src="https://hypothes.is/embed.js"></script>
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Databases-0</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigatie</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="voorwoord.html">Voorwoord</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inleiding.html">Inleiding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inleiding-1.html">Inleiding Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="relationele-databases.html">Relationele databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-in-meerdere-tabellen.html">Data in meerdere tabellen</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Database-ontwerp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#voorbeeldtoepassing">Voorbeeldtoepassing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#entity-relationship-model">Entity-Relationship model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#over-modelleren">Over modelleren</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#redundantie-en-normaalvormen">Redundantie en normaalvormen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vervolg">Vervolg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#opmerkingen">Opmerkingen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nosql.html">NoSQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linked-data.html">Linked data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="toetsvragen.html">Toetsvragen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Begrippenlijst</a></li>
+<li class="toctree-l1"><a class="reference internal" href="voordedocent.html">Voor de docent</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="data-in-meerdere-tabellen.html" title="vorig hoofdstuk">Data in meerdere tabellen</a></li>
+      <li>Next: <a href="nosql.html" title="volgend hoofdstuk">NoSQL</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Snel zoeken</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Zoek" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="database-ontwerp">
+<h1>Database-ontwerp<a class="headerlink" href="#database-ontwerp" title="Permalink naar deze titel">¶</a></h1>
+<p><strong>Concepten en leerdoelen</strong></p>
+<ul class="simple">
+<li><p>analyse, logisch model, fysiek model</p></li>
+<li><p>informatiebehoefte</p></li>
+<li><p>model, modelleren</p></li>
+<li><p>E-R model, entiteit, attribuut, relatie</p></li>
+<li><p>constraints</p></li>
+<li><p>redundantie, normaalvorm</p></li>
+<li><p>functionele afhankelijkheid (als onderdeel van het conceptuele model)</p></li>
+<li><p>vertalen van E-R model naar fysiek model (voor relationele database)</p></li>
+</ul>
+<p><strong>Van analyse via database-ontwerp naar database-tabellen</strong></p>
+<p>Het ontwerpen en maken van een database gebeurt meestal in een aantal stappen.</p>
+<ul class="simple">
+<li><p>In de <em>Analyse</em> probeer je te achterhalen wie de database gaan gebruiken, waarvoor en hoe. Welke eisen stellen zij aan het resultaat?
+In het bijzonder probeer je de <em>informatiebehoefte</em> van de verschillende gebruikers in kaart te brengen.</p></li>
+<li><p>Op basis van dit resultaat maak je een <em>Logisch ontwerp</em>.
+Dit kun je weergeven als Entity-Relationship (E-R) model.
+In dit datamodel probeer je alle relevante elementen en aspecten van de database te formuleren,
+zonder je daarbij druk te maken over de manier waarop dit in een database vormgegeven kan worden.</p></li>
+<li><p>Vervolgens vertaal je het E-R model naar een <em>fysiek model</em> ofwel het <em>fysieke schema</em> van een database. Voor een relationele database betekent dit dat je een entiteit vertaalt naar een tabel, en de attributen naar de kolommen van die tabel. Een relatie kun je op meerdere manieren vertalen, afhankelijk van de eigenschappen van de relatie.</p></li>
+</ul>
+<p><strong>Iteratief ontwerp.</strong>
+In de praktijk gebruik je niet altijd een dergelijke top-down of waterval-aanpak.
+Vaak wisselen de verschillende stappen elkaar af.
+Uit een eerste analyse maak je een eerste E-R model, bijvoorbeeld voor een deel van de informatiebehoefte; daarmee maak je een eerste versie van de database.
+Vervolgens neem je een volgend deel van de informatiebehoefte, en pas je, mede op basis van de ervaringen met die eerste versie, het E-R model aan, en vervolgens de eigenlijke database.</p>
+<p><strong>Database-evolutie</strong>
+Ook als je op zo’n iteratieve manier werkt heb je te maken met resultaten op verschillende niveaus: analyse, logisch ontwerp en fysiek ontwerp. Deze resultaten leg je steeds afzonderlijk vast: de analyse en het ontwerp vormen belangrijke documentatie bij de database.</p>
+<p>Het ontwerpen van een database is niet afgelopen nadat deze in gebruik genomen is.
+Er ontstaan nieuwe informatiebehoeftes, waarvoor je het ontwerp en de database moet aanpassen.
+Dit kan wel betekenen dat je bestaande data in de database moet <em>migreren</em> naar een nieuwe versie.</p>
+<p>In dit onderdeel gaan we vooral in op de tweede stap: het maken van een E-R model.
+We gaan kort in op de manier waarop je dit vertaalt naar een fysiek model: de tabellen en constraints van een relationele database.</p>
+<div class="section" id="voorbeeldtoepassing">
+<h2>Voorbeeldtoepassing<a class="headerlink" href="#voorbeeldtoepassing" title="Permalink naar deze titel">¶</a></h2>
+<p>Als voorbeeld gebruiken we een (web)toepassing waarmee gebruikers zich kunnen inschrijven voor verschillende events - zoals bijvoorbeeld schaakwedstrijden.
+Een deelnemer moet zich eerst als lid aanmelden, met voornaam, achternaam en email.
+Een aangemeld lid kan zich bij verschillende events (op verschillende data) inschrijven.
+Bij inschrijving maakt een lid een keuze uit de verschillende maaltijden bij deze event.
+Een lid kan zijn/haar inschrijvingen achteraf aanpassen.
+Een event-organisator kan een overzicht krijgen van de inschrijvingen voor een event.</p>
+<p>De verschillende events zijn met hun gegevens (datum, maaltijdkeuze) “hard gecodeerd” in de toepassing.
+(Deze hoeven niet in de database opgenomen te worden.)</p>
+<div class="section" id="analyse">
+<h3>Analyse<a class="headerlink" href="#analyse" title="Permalink naar deze titel">¶</a></h3>
+<p>We slaan het analyse-deel hier grotendeels over.
+Bij deze analyse inventariseer je samen met de opdrachtgever en gebruiker(s) de  <em>processen</em> waarin deze database een rol speelt, en de verschillende <em>schermen</em> die daarbij gebruikt worden.
+Voor een web-toepassing: welke webpagina’s heb je nodig, welke informatie bieden die aan de gebruikers, en welke informatie kunnen de gebruikers hiermee invoeren?</p>
+</div>
+</div>
+<div class="section" id="entity-relationship-model">
+<h2>Entity-Relationship model<a class="headerlink" href="#entity-relationship-model" title="Permalink naar deze titel">¶</a></h2>
+<p>Een Entity-Relationship (E-R) model bestaat uit <em>entiteiten</em> met <em>attributen</em>, en <em>relaties</em> tussen deze entiteiten.</p>
+<p>Een entiteit is een “zelfstandig begrip” waarover je gegevens wilt vastleggen.
+Dit kan concreet zijn, zoals “Persoon” of “Auto”.
+Het kan ook abstract zijn, zoals “Afspraak” of “Afdeling”.</p>
+<p>Een entiteit wordt beschreven door attributen;
+anders gezegd, een attribuut beschrijft een eigenschap van een entiteit.</p>
+<p>Tussen entiteiten bestaan relaties.
+Een relatie kun je zien als een bijzonder soort attribuut dat verwijst naar een of meer andere entiteiten (of naar zichzelf).</p>
+<div class="section" id="voorbeeld-van-een-e-r-model">
+<h3>Voorbeeld van een E-R model<a class="headerlink" href="#voorbeeld-van-een-e-r-model" title="Permalink naar deze titel">¶</a></h3>
+<p>We geven hieronder het resultaat van de logische modelleerstap voor de voorbeeldtoepassing, in de vorm van een E-R model.</p>
+<blockquote>
+<div><p>In het onderdeel Database Ontwerp leer je de beginselen van het logisch modelleren.</p>
+</div></blockquote>
+<p>Als resultaat hebben we het volgende E-R model:</p>
+<p><img alt="_images/inschrijving-2.png" src="_images/inschrijving-2.png" />ER-inschijving</p>
+<ul class="simple">
+<li><p>entiteit <em>Lid</em>, met attributen: lidnr, voornaam, achternaam, email</p></li>
+<li><p>entiteit <em>Inschrijving</em>, met attributen: inschrijfnr, lidnr (relatie), datum, maaltijd</p></li>
+<li><p>relatie (via lidnr)</p></li>
+</ul>
+<p>We gebruiken het <em>lidnr</em> als identificatie (<em>key</em>) van een lid.
+Een inschrijving identificeren we via het <em>inschrijfnr</em>.</p>
+<p>Het lidnr in de inschrijving verwijst naar het bijbehorende lid: dit is de relatie tussen lid en inschrijving.</p>
+<p>Bij dit model kunnen we  de volgende constraints formuleren</p>
+<ul class="simple">
+<li><p>het email-adres van een lid is uniek</p></li>
+<li><p>de combinatie (lidnr, datum) van een inschrijving is uniek.</p></li>
+<li><p>relatie:</p>
+<ul>
+<li><p>iedere inschrijving heeft precies 1 lid</p></li>
+<li><p>ieder lid heeft 0 of meer inschrijvingen</p></li>
+</ul>
+</li>
+</ul>
+<p>Bovendien zijn de attributen zijn allemaal enkelwaardig: dat wil zeggen, een lid heeft één lidnr, één voornaam, één achternaam, en één email-adres. Dit volgt uit de notatie: een meerwaardig attribuut heeft een dubbele rand.</p>
+</div>
+<div class="section" id="constraints">
+<h3>Constraints<a class="headerlink" href="#constraints" title="Permalink naar deze titel">¶</a></h3>
+<p>Bij het E-R model horen ook <em>constraints</em>:
+voorwaarden waaraan de data in de database moeten voldoen.
+Deze constraints worden bepaald door de wereld die we modelleren.
+<em>voorbeelden</em>: een geboortedatum moet in het verleden liggen; een persoon heeft precies één geboortedatum; de eventuele huwelijksdatum van een persoon moet na zijn geboortedatum vallen. Een emailadres hoort bij één persoon (in een bepaalde context). Een persoon kan een bepaald moment niet op meerdere plekken aanwezig zijn.</p>
+<p>De constraints bij het bovenstaande model zijn:</p>
+<ul class="simple">
+<li><p>niet NULL: lidnr, voornaam, achternaam, email; en inschrijfnr, datum mogen niet NULL zijn;</p></li>
+<li><p>uniek: afgezien van de keys, moet de email van een lid uniek zijn; en moet de combinatie (lidnr, datum) bij de inschrijvingen uniek zijn.</p></li>
+<li><p>relatie-multipliciteit: iedere inschrijving heeft precies 1 lid; ieder lid heeft 0 of meer inschrijvingen</p></li>
+</ul>
+<p>Omdat iedere inschrijving precies 1 lid heeft, kunnen we de relatie voorstellen door een verwijzing van inschrijving naar lid: we hebben geen aparte relatie-tabel nodig (zoals in het geval van N-M relaties.)</p>
+<p>In het geval van een relationele database kunnen we deze constraints in de database weergeven: het DBMS zorg ervoor dat de data in de database aan deze constraints voldoen, door bij elke verandering de nieuwe data te controleren.
+Een verandering van de data in de database wordt geweigerd  als deze een constraint geweld aan doet.</p>
+<p><strong>vraag</strong> we kunnen een constraint ook schenden door het verwijderen van data. Hoe verwerkt het RDBMS deze?</p>
+</div>
+<div class="section" id="opdracht">
+<h3>Opdracht<a class="headerlink" href="#opdracht" title="Permalink naar deze titel">¶</a></h3>
+<p>De opdrachtgever blijkt het bij nader inzien toch handiger te vinden om de event-gegevens niet in de code (tekst) van de toepassing op te nemen, maar om deze in de database op te slaan.</p>
+<p>Pas het model hierboven aan voor deze nieuwe situatie.
+Als attributen van een Event kun je o.a. denken aan: datum, kosten, locatie.</p>
+</div>
+</div>
+<div class="section" id="over-modelleren">
+<h2>Over modelleren<a class="headerlink" href="#over-modelleren" title="Permalink naar deze titel">¶</a></h2>
+<p>Een datamodel vormt een <em>abstractie</em> van de wereld waarin de database gebruikt wordt.
+Het model bevat alleen alleen de relevante elementen van deze wereld.
+Een model maak je altijd met een bepaald doel:
+alleen in de context van het doel weet je wat relevant is, en wat niet: wat mag je weglaten, en wat moet je beslist opnemen?
+Meestal probeer je een model zo eenvoudig mogelijk te houden: alles wat niet relevant is (voor het doel) laat je weg.</p>
+<p>Een goede kennis van het toepassingsgebied is essentieel voor het maken van een goed model: deze kennis heb je nodig om te weten wat relevant is, en wat niet.
+Bij het opstellen van een conceptueel datamodel moet je daarom regelmatig overleggen met de opdrachgever/gebruiker.</p>
+<p>Je kunt een model vergelijken met een kaart:
+dit laat maar een klein deel van de eigenschappen van het landschap zien.
+Een kaart is altijd gemaakt met een bepaald doel: alleen de eigenschappen die van belang zijn voor dat doel worden daarop weergegeven.</p>
+<p>Voorbeeld: een wandelkaart heeft een andere schaal en bevat andere elementen dan een autokaart van hetzelfde gebied. Een autokaart is onbruikbaar voor een wandelaar, en een wandelkaart is niet zinvol voor een automobilist.</p>
+<p><strong>Moet je altijd je eigen model maken?</strong></p>
+<ul class="simple">
+<li><p>ja: elke toepassing heeft zijn eigen specifieke kenmerken, elke gebruiker heeft weer andere informatiebehoeftes;</p></li>
+<li><p>nee: voor steeds meer toepassingsgebieden en deelgebieden bestaan <em>schema’s</em> met gestandaardiseerde entiteiten en attributen.</p></li>
+</ul>
+<p>Bij het onderdeel Linked Data gaan we verder in op het gebruik van deze standaaard-schema’s.
+Deze zijn vooral belangrijk voor het uitwisselen van gegevens en het koppelen van databases.</p>
+</div>
+<div class="section" id="redundantie-en-normaalvormen">
+<h2>Redundantie en normaalvormen<a class="headerlink" href="#redundantie-en-normaalvormen" title="Permalink naar deze titel">¶</a></h2>
+<p>In het bovenstaande model hebben we de inschrijvingen en de leden</p>
+</div>
+<div class="section" id="vervolg">
+<h2>Vervolg<a class="headerlink" href="#vervolg" title="Permalink naar deze titel">¶</a></h2>
+<p>In het onderdeel Database design ga je met complexere voorbeelden aan de slag.
+Je zult merken dat je voor een realistisch voorbeeld meerdere entiteiten nodig hebt.
+Het maken van een goed E-R model wordt dan al snel veel lastiger.</p>
+<p><img alt="_images/leden-inschrijvingen-mysql.png" src="_images/leden-inschrijvingen-mysql.png" />leden-inschrijvingen</p>
+</div>
+<div class="section" id="opmerkingen">
+<h2>Opmerkingen<a class="headerlink" href="#opmerkingen" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="over-het-lidnr">
+<h3>Over het <code class="docutils literal notranslate"><span class="pre">lidnr</span></code><a class="headerlink" href="#over-het-lidnr" title="Permalink naar deze titel">¶</a></h3>
+<p>In principe kunnen we in het voorbeeld het email-adres gebruiken als unieke identificatie van een lid.
+Toch voeren we een apart <code class="docutils literal notranslate"><span class="pre">lidnr</span></code> in als unieke identificatie - en als primary key voor de leden-tabel.
+Eén van de redenen daarvoor is dat we hiermee de mogelijkheid krijgen om het eemail-adres te veranderen. (Natuurlijk stellen we dan nog steeds de eis dat het email-adres uniek moet zijn.)</p>
+<p>Het is gebruikelijk om de primaire key van een database als ‘immutable’ (onveranderlijk) te beschouwen:
+deze gebruik je op andere plaatsen in de database mogelijk als <em>foreign key</em>.
+Als je de waarde van een primary key verandert, moet je ook alle plaatsen aanpassen waar deze als foreign key gebruikt wordt.
+Door het gebruik van een apart en onveranderlijk <code class="docutils literal notranslate"><span class="pre">lidnr</span></code>voorkomen we dit probleem.
+Dit <code class="docutils literal notranslate"><span class="pre">lidnr</span></code> gebruiken we dan elders als foreign key.</p>
+</div>
+<div class="section" id="over-normalisatie">
+<h3>Over normalisatie<a class="headerlink" href="#over-normalisatie" title="Permalink naar deze titel">¶</a></h3>
+<p>Je kunt normaliseren in het logische (conceptuele) niveau, van enititeiten en relaties.
+Je kunt dit ook later doen, bij het maken van het fysieke ontwerp van de (relationele) database.</p>
+<p>Omdat een begrip als “functionele afhankelijkheid” betrekking heeft op het verband tussen het model en de wereld die we modelleren, ligt het voor de hand om de functionele afhankelijkheden te bepalen in deze fase: in veel gevallen heb je hier ook expertise van het toepassingsgebied voor nodig.</p>
+<p>Met andere woorden: we streven naar een model waarbij de verschillende attributen van een entiteit alleen afhangen van de key (UID) van die entiteit, niet van andere attributen.</p>
+<p>Een apart geval vormen meerwaardige attributen.
+Bij het vertalen van een E-R model naar een relationele database moeten we deze omzetten in een aparte tabel,
+om redundantie in de relationele database te voorkomen.
+We hebben hier niet te maken met redundantie in het E-R model, maar alleen met redundantie in de relationele database.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+
+    <div class="footer">
+      &copy;2019, SLO.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/database-ontwerp.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+<script type="text/javascript">
+  $(document).trigger("runestone:login-complete");
+</script>
+
+  </body>
+</html>
