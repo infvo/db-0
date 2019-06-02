@@ -49,7 +49,7 @@
     <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Zoeken" href="search.html" />
-    <link rel="next" title="Inleiding" href="inleiding.html" />
+    <link rel="next" title="Inleiding Databases" href="inleiding.html" />
     <link rel="prev" title="Welkom bij Databases-0" href="index.html" />
 
 <script type="text/javascript">
@@ -92,9 +92,11 @@
 
 <h3>Navigatie</h3>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Voorwoord</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inleiding.html">Inleiding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inleiding-1.html">Inleiding Databases</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Voorwoord</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#organisatie-van-het-materiaal">Organisatie van het materiaal</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="inleiding.html">Inleiding Databases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="relationele-databases.html">Relationele databases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-in-meerdere-tabellen.html">Data in meerdere tabellen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="database-ontwerp.html">Database-ontwerp</a></li>
@@ -110,7 +112,7 @@
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="index.html" title="vorig hoofdstuk">Welkom bij Databases-0</a></li>
-      <li>Next: <a href="inleiding.html" title="volgend hoofdstuk">Inleiding</a></li>
+      <li>Next: <a href="inleiding.html" title="volgend hoofdstuk">Inleiding Databases</a></li>
   </ul></li>
 </ul>
 </div>
@@ -142,7 +144,77 @@
             
   <div class="section" id="voorwoord">
 <h1>Voorwoord<a class="headerlink" href="#voorwoord" title="Permalink naar deze titel">¶</a></h1>
-<p><em>voor de lezer</em></p>
+<p>Databases zijn zo oud als het schrift:
+het schrift is ontwikkeld uit de eerste pogingen om bedrijfsdata vast te leggen:
+voorraden, transacties e.d.
+In de eeuwen daarna is het voor bedrijven en andere organisaties altijd
+belangrijk geweest om gegevens over hun processen vast te leggen -
+om deze op een ander moment, mogelijk in een ander proces, te kunnen gebruiken.
+Daarnaast legt de wetenschap al eeuwenlang gegevens vast in tabellen,
+bijvoorbeeld om daarin patronen en wetmatigheden te ontdekken.
+Ook individuen hebben vaak hun persoonlijke “databases”,
+in de vorm van adresboekjes en huishoudboekjes.</p>
+<blockquote>
+<div><p><em>Deze administraties zijn nu voor historici een belangrijke bron:
+ze geven vaak een beter inzicht in het leven in die tijd dan de verslagen
+van oorlogen e.d.</em></p>
+</div></blockquote>
+<p>Met de komst van de computer zijn de mogelijkheden van databases enorm toegenomen.
+Enerzijds hebben we te maken met een “explosie” aan data,
+bijvoorbeeld door alle sporen die mensen via hun gebruik van het web achterlaten,
+of door alle Internet-of-Things-sensoren.
+Anderzijds hebben we steeds meer mogelijheden om deze data te analyseren,
+en hier patronen en wetmatigheden in te vinden.
+Tussen deze data-productie en data-analyse vinden we databases,
+in allerlei soorten en maten.</p>
+<p>In steeds meer beroepen heb je te maken met “big data” en <em>Data Science</em>.
+Kennis van databases komt daarbij goed van pas:
+je moet weten hoe je grote hoeveelheden data handig kunt vastleggen,
+en je moet weten hoe je data kunt raadplegen.</p>
+<p>De eisen die aan databases gesteld worden verschillen sterk:
+voor een bedrijfsadministratie, een bank of de belastingdienst is
+consistentie van de data op elk moment van groot belang,
+ook als dat enigszins ten koste gaat van de snelheid.
+Voor het analyseren van grote hoeveelheden data (Data Science) is
+juist deze snelheid belangrijk, en is een wat zwakkere vorm van consistentie acceptabel.
+Er is niet één database-technologie die voor alle toepassingen de meest handige is.</p>
+<p>In dit materiaal ligt de nadruk op de “klassieke” relationele (SQL) databases.
+Als je iets over databases wilt leren, begin je daarmee.
+Daarnaast geven we een voorbeeld van een <em>document-database</em>,
+als NoSQL-alternatief.</p>
+<div class="section" id="organisatie-van-het-materiaal">
+<h2>Organisatie van het materiaal<a class="headerlink" href="#organisatie-van-het-materiaal" title="Permalink naar deze titel">¶</a></h2>
+<p>Het materiaal bestaat uit:</p>
+<ul class="simple">
+<li><p>een inleiding (dit document) in de onderwerpen van het database-thema: (i) SQL;
+(ii) database-ontwerp; (iii) NoSQL en Linked Data</p></li>
+<li><p><a class="reference external" href="https://sql.informaticavo.nl">SQL</a> - als querytaal voor relationele databases;</p></li>
+<li><p>Database-ontwerp (link): van analyse tot Entity-Relationship-model;</p></li>
+<li><p><a class="reference external" href="https://infvo.github.io/nosql-ld">NoSQL en Linked Data</a>.</p></li>
+</ul>
+<p>De links hierboven verwijzen naar het materiaal voor het betreffende onderdeel.</p>
+<p>De gesuggereerde aanpak voor dit thema is:</p>
+<ol class="arabic simple">
+<li><p>inleiding (ca. 2 weken, 10 SLU)</p></li>
+<li><p>keuze uit SQL/DB-ontwerp/NoSQL en Linked data (6 weken, 30 SLU)</p></li>
+<li><p>toepassen van DB-kennis in een project (20 SLU),
+zo mogelijk gecombineerd met andere thema’s.</p></li>
+</ol>
+<p><strong>Hoe kies je?</strong>
+Als je begint met databases, bijvoorbeeld omdat dit in het basismateriaal
+nog niet aan bod geweest is, kies dan voor SQL.</p>
+<p>Database-ontwerp is een uitdagend onderwerp,
+en een oefening in conceptueel modelleren die ook buiten de context van databases zinvol is.</p>
+<p>NoSQL en Linked Data is wat praktischer gericht,
+maar wel “anders” dan de klassieke SQL-benadering.</p>
+<p><strong>Over het project.</strong>
+Veel praktische projecten hebben een database-component,
+maar daarnaast ook veel andere aspecten - zoals interactie met gebruikers,
+web-technologie of internet of things,
+Een dergelijke multi-thema/multi-disciplinair project is
+bij uitstek geschikt om als leerlingen met verschillende achtergronden
+en interesses in samen te werken.</p>
+</div>
 </div>
 
 

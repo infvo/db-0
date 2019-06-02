@@ -10,17 +10,17 @@ Een ander voorbeeld is het gebruik van tabellen in een traditionele boekhouding.
 Relationele databases zijn gebaseerd op tabellen van *gelijkvormige gegevens*:
 
 * een relationele database bestaat uit tabellen;
-* een tabel bestaat uit benoemde kolommen van gelijksoortige gegevens,
-* en uit rijen die geïdentificeerd worden met een sleutel (key).
+* een tabel bevat een verzameling rijen die geïdentificeerd worden met een sleutel (key);
+* een rij bestaat uit een verzameling kolomwaarden; een kolom wordt geïdentificeerd door een naam.
 
-Elke kolom in een tabel heeft een (unieke) naam.
-Een kolom van een tabel bevat gegevens van eenzelfde (data)type,
+Alle rijen hebben dezelfde verzameling kolomnamen.
+Een kolom bevat gelijksoortige gegevens: alle gegevens in die kolom zijn van eenzelfde (data)type,
 bijvoorbeeld tekst, geheel getal, of datum.
 
 Een rij in een tabel identificeer je met een (unieke) *key*, bijvoorbeeld het mobiel nummer van een persoon.
 
 Dit betekent dat je elk elementair gegeven in een tabel kunt vinden met de combinatie van rij-*key*
-en kolom-naam.
+en kolomnaam.
 
 Enkele voorbeelden van tabellen
 
@@ -41,3 +41,11 @@ Dit betekent dat je formules kunt maken die je samenstelt uit tabellen en deze o
 Het rekenen met relaties is hierdoor een krachtig middel voor het werken met database-gegevens.
 
 Enkele voorbeelden van selectie, projectie en cartesisch product:
+
+### Opdrachten
+
+De oefenopdrachten voor relationele databases vind je in een Jupyter Notebook, zie: [python-sqlite.ipynb op GitHub](https://github.com/infvo/ieni2018-db/blob/master/python-sqlite.ipynb)
+
+Dit notebook kun je uitvoeren via deze [Binder-link](
+https://mybinder.org/v2/gh/infvo/ieni2018-db/master?filepath=python-sqlite.ipynb).
+Je kunt in het notebook je eigen aanpassingen maken, en "spelen" met de data en de database-opdrachten.

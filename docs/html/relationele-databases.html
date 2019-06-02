@@ -50,7 +50,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Zoeken" href="search.html" />
     <link rel="next" title="Data in meerdere tabellen" href="data-in-meerdere-tabellen.html" />
-    <link rel="prev" title="Inleiding Databases" href="inleiding-1.html" />
+    <link rel="prev" title="Inleiding Databases" href="inleiding.html" />
 
 <script type="text/javascript">
   eBookConfig = {};
@@ -93,10 +93,10 @@
 <h3>Navigatie</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="voorwoord.html">Voorwoord</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inleiding.html">Inleiding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inleiding-1.html">Inleiding Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inleiding.html">Inleiding Databases</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Relationele databases</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#rekenen-met-relaties">Rekenen met relaties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#opdrachten">Opdrachten</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data-in-meerdere-tabellen.html">Data in meerdere tabellen</a></li>
@@ -112,7 +112,7 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="inleiding-1.html" title="vorig hoofdstuk">Inleiding Databases</a></li>
+      <li>Previous: <a href="inleiding.html" title="vorig hoofdstuk">Inleiding Databases</a></li>
       <li>Next: <a href="data-in-meerdere-tabellen.html" title="volgend hoofdstuk">Data in meerdere tabellen</a></li>
   </ul></li>
 </ul>
@@ -155,15 +155,15 @@ Een ander voorbeeld is het gebruik van tabellen in een traditionele boekhouding.
 <p>Relationele databases zijn gebaseerd op tabellen van <em>gelijkvormige gegevens</em>:</p>
 <ul class="simple">
 <li><p>een relationele database bestaat uit tabellen;</p></li>
-<li><p>een tabel bestaat uit benoemde kolommen van gelijksoortige gegevens,</p></li>
-<li><p>en uit rijen die geïdentificeerd worden met een sleutel (key).</p></li>
+<li><p>een tabel bevat een verzameling rijen die geïdentificeerd worden met een sleutel (key);</p></li>
+<li><p>een rij bestaat uit een verzameling kolomwaarden; een kolom wordt geïdentificeerd door een naam.</p></li>
 </ul>
-<p>Elke kolom in een tabel heeft een (unieke) naam.
-Een kolom van een tabel bevat gegevens van eenzelfde (data)type,
+<p>Alle rijen hebben dezelfde verzameling kolomnamen.
+Een kolom bevat gelijksoortige gegevens: alle gegevens in die kolom zijn van eenzelfde (data)type,
 bijvoorbeeld tekst, geheel getal, of datum.</p>
 <p>Een rij in een tabel identificeer je met een (unieke) <em>key</em>, bijvoorbeeld het mobiel nummer van een persoon.</p>
 <p>Dit betekent dat je elk elementair gegeven in een tabel kunt vinden met de combinatie van rij-<em>key</em>
-en kolom-naam.</p>
+en kolomnaam.</p>
 <p>Enkele voorbeelden van tabellen</p>
 <div class="section" id="rekenen-met-relaties">
 <h2>Rekenen met relaties<a class="headerlink" href="#rekenen-met-relaties" title="Permalink naar deze titel">¶</a></h2>
@@ -184,6 +184,12 @@ Enkele voorbeelden van dit soort operaties:</p>
 Dit betekent dat je formules kunt maken die je samenstelt uit tabellen en deze operatoren.
 Het rekenen met relaties is hierdoor een krachtig middel voor het werken met database-gegevens.</p>
 <p>Enkele voorbeelden van selectie, projectie en cartesisch product:</p>
+</div>
+<div class="section" id="opdrachten">
+<h2>Opdrachten<a class="headerlink" href="#opdrachten" title="Permalink naar deze titel">¶</a></h2>
+<p>De oefenopdrachten voor relationele databases vind je in een Jupyter Notebook, zie: <a class="reference external" href="https://github.com/infvo/ieni2018-db/blob/master/python-sqlite.ipynb">python-sqlite.ipynb op GitHub</a></p>
+<p>Dit notebook kun je uitvoeren via deze <a class="reference external" href="https://mybinder.org/v2/gh/infvo/ieni2018-db/master?filepath=python-sqlite.ipynb">Binder-link</a>.
+Je kunt in het notebook je eigen aanpassingen maken, en “spelen” met de data en de database-opdrachten.</p>
 </div>
 </div>
 
