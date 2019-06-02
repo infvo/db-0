@@ -22,7 +22,8 @@ Waar vind ik het materiaal?
     aan een alternatief (via Binder of vergelijkbaar) wordt gewerkt.
 
 Feedback op het materiaal kan in veel gevallen via hypothes.is (zie de rechter bovenhoek).
-Ook kun je hiervoor terecht op het i&i forum: 
+Ook kun je hiervoor terecht op het `i&i forum <https://ieni-forum.infvo.nl/c/lesmateriaal/SLO-databases>`_.
+Uitwerkingen van opdrachten zijn t.z.t. ook daar te vinden.
 
 Planning
 ========

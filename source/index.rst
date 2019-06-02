@@ -19,6 +19,7 @@ Welkom bij Databases-0
    toetsvragen.rst
    glossary.rst
    voordedocent.rst
+   colofon.md
 
 
 Indices and tables

@@ -86,3 +86,12 @@ De oefenopdrachten voor relationele databases zijn te vinden in een Jupyter Note
 Dit notebook kun je uitvoeren via deze [Binder-link](
 https://mybinder.org/v2/gh/infvo/ieni2018-db/master?filepath=python-sqlite.ipynb).
 Je kunt in het notebook je eigen aanpassingen maken, en "spelen" met de data en de database-opdrachten.
+
+## Opdrachten
+
+**Opdracht INL-1**
+
+Geef tenminste 3 voorbeelden van databases uit je eigen omgeving.
+(Dit mogen ook niet-gecomputeriseerde databases zijn.)
+Geef tenminste 3 voorbeelden van toepassingen waarin waarin mogelijk een database gebruikt wordt/zinvol is.
+Motiveer je antwoord.
