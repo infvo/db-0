@@ -9,20 +9,21 @@ Een ander voorbeeld is het gebruik van tabellen in een traditionele boekhouding.
 
 Relationele databases zijn gebaseerd op tabellen van *gelijkvormige gegevens*:
 
-* een relationele database bestaat uit tabellen;
-* een tabel bevat een verzameling rijen die geïdentificeerd worden met een sleutel (key);
-* een rij bestaat uit een verzameling kolomwaarden; een kolom wordt geïdentificeerd door een naam.
+* een relationele database is een verzameling tabellen;
+* een tabel is een verzameling rijen;
+* een rij is een verzameling kolomwaarden.
 
-Alle rijen hebben dezelfde verzameling kolomnamen.
+Een kolom identificeer je met een kolomnaam.
+Alle rijen hebben dezelfde kolomnamen.
 Een kolom bevat gelijksoortige gegevens: alle gegevens in die kolom zijn van eenzelfde (data)type,
 bijvoorbeeld tekst, geheel getal, of datum.
 
-Een rij in een tabel identificeer je met een (unieke) *key*, bijvoorbeeld het mobiel nummer van een persoon.
+Een rij in een tabel identificeer je met een (unieke) *key*.
 
 Dit betekent dat je elk elementair gegeven in een tabel kunt vinden met de combinatie van rij-*key*
 en kolomnaam.
 
-Enkele voorbeelden van tabellen
+Enkele voorbeelden van tabellen P.M.
 
 ### Rekenen met relaties
 

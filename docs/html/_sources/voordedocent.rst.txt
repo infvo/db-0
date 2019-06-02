@@ -21,6 +21,9 @@ Waar vind ik het materiaal?
     Voor het uitvoeren van deze notebooks is (op aanvraag) een aparte server beschikbaar;
     aan een alternatief (via Binder of vergelijkbaar) wordt gewerkt.
 
+Feedback op het materiaal kan in veel gevallen via hypothes.is (zie de rechter bovenhoek).
+Ook kun je hiervoor terecht op het i&i forum: 
+
 Planning
 ========
 
