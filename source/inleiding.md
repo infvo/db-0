@@ -11,9 +11,7 @@ voor een organisatie misschien 10 jaar,
 voor personen enkele decennia,
 en voor historisch inzicht milennia.
 
-> Het schrift is ontstaan uit de behoefte om gegevens over zakelijke transacties vast te leggen (boekhouding).
-Voor een hedendaags historicus zijn deze oude boekhoudingen van groot belang.
-
+Databases zijn al zo oud als het schrift: ook voor de komst van de computer zijn er veel gegevens in databases georganiseerd.
 Het gebruik van computers maakt dat we anders met dit soort gegevens om kunnen gaan:
 
 * we kunnen deze gegevens veel gemakkelijker delen met anderen, waardoor we ervoor kunnen zorgen dat iedereen op elk moment de juiste gegevens heeft;
@@ -78,14 +76,6 @@ Een uitwerking van dit voorbeeld is te vinden op glitch.com:
 
 Je kunt daar de database-operaties vinden als onderdeel van een Python-Flask web-applicatie.
 Je kunt op glitch.com een eigen "remix" maken van deze toepassing, met eigen uitbreidingen en variaties.
-
-### Relationele databases
-
-De oefenopdrachten voor relationele databases zijn te vinden in een Jupyter Notebook, zie: [python-sqlite.ipynb op GitHub](https://github.com/infvo/ieni2018-db/blob/master/python-sqlite.ipynb)
-
-Dit notebook kun je uitvoeren via deze [Binder-link](
-https://mybinder.org/v2/gh/infvo/ieni2018-db/master?filepath=python-sqlite.ipynb).
-Je kunt in het notebook je eigen aanpassingen maken, en "spelen" met de data en de database-opdrachten.
 
 ## Opdrachten
 
