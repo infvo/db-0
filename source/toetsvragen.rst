@@ -2,27 +2,27 @@
 Toetsvragen
 ***********
 
-In een relationele database:
+Inleiding
+=========
 
-* geef je de kolommen namen
-* geef je de rijen namen
-* nummer je de rijen opeenvolgend
-* nummer je de kolommen opeenvolgend
+Relationele databases
+=====================
 
-Vul in:
+.. mchoice:: vraag-RDB-1
+   :answer_a: geef je de kolommen namen
+   :answer_b: geef je de rijen namen
+   :answer_c: identificeer je de rijen met unieke keys
+   :answer_d: nummer je de rijen altijd opeenvolgend
+   :correct: a, c
+   :feedback_a: en een rij identificeer je met een key
+   :feedback_b: Je geeft de kolommen namen; een rij identificeer je met een key
+   :feedback_c: en je geeft de kolommen namen
+   :feedback_d: Je geeft de kolommen namen; een rij identificeer je met een key
 
-* een relationele database is een verzameling XXX;
-* elke tabel bestaat uit een verzameling XXX, waarbij elke XXX een naam en een type heeft,
-* en een verzameling XXX, die je onderscheidt op basis van hun XXX.
+   Hoe identificeer je de rijen en kolommen van een tabel in een relationele database?
 
-Voldoet een spreadsheet aan de eisen van een relationele database?
-(Immers, een spreadsheet bestaat ook uit tabellen.)
+Database-ontwerp
+================
 
-
-Opdrachten
-==========
-
-.. rubric:: Voorbeelden uit je eigen omgeving
-
-Geef voorbeelden van databases uit je eigen omgeving;
-en van toepassingen waarin mogelijk een database gebruikt wordt/zinvol is.
+NoSQL-databases en Linked data
+==============================

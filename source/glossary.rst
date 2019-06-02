@@ -49,3 +49,7 @@ Begrippenlijst
     dan noemen we B functioneel afhankelijk van A.
     In de gewenste (3e) normaalvorm zijn alle attributen alleen afhankelijk van de key,
     en niet van andere attributen.
+
+  multipliciteit
+    de multipliciteit van een relatie beschijft het minimum en het maximum aantal elementen dat in een relatie betrokken is.
+    

@@ -10,8 +10,7 @@ Welkom bij Databases-0
    :maxdepth: 2
 
    voorwoord.rst
-   inleiding.rst
-   inleiding-1.md
+   inleiding.md
    relationele-databases.md
    data-in-meerdere-tabellen.md
    database-ontwerp.md
@@ -20,6 +19,7 @@ Welkom bij Databases-0
    toetsvragen.rst
    glossary.rst
    voordedocent.rst
+   colofon.md
 
 
 Indices and tables

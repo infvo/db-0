@@ -93,8 +93,7 @@
 <h3>Navigatie</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="voorwoord.html">Voorwoord</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inleiding.html">Inleiding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inleiding-1.html">Inleiding Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inleiding.html">Inleiding Databases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="relationele-databases.html">Relationele databases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data-in-meerdere-tabellen.html">Data in meerdere tabellen</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Database-ontwerp</a><ul>
@@ -111,6 +110,7 @@
 <li class="toctree-l1"><a class="reference internal" href="toetsvragen.html">Toetsvragen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Begrippenlijst</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voordedocent.html">Voor de docent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="colofon.html">Colofon</a></li>
 </ul>
 
 <div class="relations">
@@ -204,9 +204,9 @@ Voor een web-toepassing: welke webpagina’s heb je nodig, welke informatie bied
 <div class="section" id="entity-relationship-model">
 <h2>Entity-Relationship model<a class="headerlink" href="#entity-relationship-model" title="Permalink naar deze titel">¶</a></h2>
 <p>Een Entity-Relationship (E-R) model bestaat uit <em>entiteiten</em> met <em>attributen</em>, en <em>relaties</em> tussen deze entiteiten.</p>
-<p>Een entiteit is een “zelfstandig begrip” waarover je gegevens wilt vastleggen.
-Dit kan concreet zijn, zoals “Persoon” of “Auto”.
-Het kan ook abstract zijn, zoals “Afspraak” of “Afdeling”.</p>
+<p>Een entiteit is een <em>zelfstandig begrip</em> waarover je gegevens wilt vastleggen.
+Dit kan een concreet begrip zijn, zoals “Persoon” of “Auto”.
+Het kan ook iets abstracts zijn, zoals “Afspraak” of “Afdeling”.</p>
 <p>Een entiteit wordt beschreven door attributen;
 anders gezegd, een attribuut beschrijft een eigenschap van een entiteit.</p>
 <p>Tussen entiteiten bestaan relaties.
@@ -238,7 +238,12 @@ Een inschrijving identificeren we via het <em>inschrijfnr</em>.</p>
 </ul>
 </li>
 </ul>
+<p>Deze <em>multipliciteit</em> van de relatie wordt in de tekening weergegeven met behulp van “kraaiepoten”: deze geven het minimum aantal (“0” of “1”) en het maximum aantal (“1” of “meer”) aan. Je kunt de kraaiepoot zien als een bijzonder soort pijlpunt.</p>
 <p>Bovendien zijn de attributen zijn allemaal enkelwaardig: dat wil zeggen, een lid heeft één lidnr, één voornaam, één achternaam, en één email-adres. Dit volgt uit de notatie: een meerwaardig attribuut heeft een dubbele rand.</p>
+<p><strong>Alternatieve notatie.</strong> Hieronder vind je een alternatieve notatie voor hetzelfde E-R model.
+Deze laatste notatie ligt dichter bij de tabellen van een relationele database.
+Bovendien is deze notatie compacter, wat vooral voor een groot model handig is.</p>
+<p><img alt="_images/leden-inschrijvingen-mysql.png" src="_images/leden-inschrijvingen-mysql.png" />leden-inschrijvingen</p>
 </div>
 <div class="section" id="constraints">
 <h3>Constraints<a class="headerlink" href="#constraints" title="Permalink naar deze titel">¶</a></h3>
@@ -294,7 +299,6 @@ Deze zijn vooral belangrijk voor het uitwisselen van gegevens en het koppelen va
 <p>In het onderdeel Database design ga je met complexere voorbeelden aan de slag.
 Je zult merken dat je voor een realistisch voorbeeld meerdere entiteiten nodig hebt.
 Het maken van een goed E-R model wordt dan al snel veel lastiger.</p>
-<p><img alt="_images/leden-inschrijvingen-mysql.png" src="_images/leden-inschrijvingen-mysql.png" />leden-inschrijvingen</p>
 </div>
 <div class="section" id="opmerkingen">
 <h2>Opmerkingen<a class="headerlink" href="#opmerkingen" title="Permalink naar deze titel">¶</a></h2>
