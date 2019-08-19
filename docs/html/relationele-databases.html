@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/accessibility.css?v=808B982A" />
-    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css?v=B9BAA0D1" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css?v=1FF7F927" />
     <link rel="stylesheet" type="text/css" href="_static/poll.css?v=E220AC33" />
     <link rel="stylesheet" type="text/css" href="_static/parsons.css?v=2F3E13EE" />
     <link rel="stylesheet" type="text/css" href="_static/js_lib/prettify.css?v=2A364B6B" />
@@ -21,19 +21,19 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/language_data.js"></script>
-    <script type="text/javascript" src="_static/mchoice.js?v=8329CA55"></script>
+    <script type="text/javascript" src="_static/mchoice.js?v=6F3B51A7"></script>
     <script type="text/javascript" src="_static/timedmc.js?v=B010A457"></script>
     <script type="text/javascript" src="_static/timed.js?v=6789FE30"></script>
-    <script type="text/javascript" src="_static/shortanswer.js?v=5EB6170D"></script>
+    <script type="text/javascript" src="_static/shortanswer.js?v=BB0B99B1"></script>
     <script type="text/javascript" src="_static/timed_shortanswer.js?v=B3A117D7"></script>
-    <script type="text/javascript" src="_static/dragndrop.js?v=2B6403E8"></script>
+    <script type="text/javascript" src="_static/dragndrop.js?v=3984FD8D"></script>
     <script type="text/javascript" src="_static/timeddnd.js?v=378F237E"></script>
-    <script type="text/javascript" src="_static/poll.js?v=6C59AE9F"></script>
+    <script type="text/javascript" src="_static/poll.js?v=11AD6126"></script>
     <script type="text/javascript" src="_static/js_lib/prettify.js?v=CA7E8928"></script>
     <script type="text/javascript" src="_static/js_lib/hammer.min.js?v=73056367"></script>
     <script type="text/javascript" src="_static/parsons.js?v=93EFFF39"></script>
     <script type="text/javascript" src="_static/timedparsons.js?v=2EEA9E5A"></script>
-    <script type="text/javascript" src="_static/reveal.js?v=112CBFA2"></script>
+    <script type="text/javascript" src="_static/reveal.js?v=9C3AAF60"></script>
     <script type="text/javascript" src="_static/tabbedstuff.js?v=5BE6106"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
     <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
@@ -49,7 +49,7 @@
     <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Zoeken" href="search.html" />
-    <link rel="next" title="Data in meerdere tabellen" href="data-in-meerdere-tabellen.html" />
+    <link rel="next" title="Rekenen met relaties(1)" href="relationele-databases/relatie-rekenen-1.html" />
     <link rel="prev" title="Inleiding Databases" href="inleiding.html" />
 
 <script type="text/javascript">
@@ -93,13 +93,14 @@
 <h3>Navigatie</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="voorwoord.html">Voorwoord</a></li>
+<li class="toctree-l1"><a class="reference internal" href="voorbeelden.html">Voorbeelden</a></li>
 <li class="toctree-l1"><a class="reference internal" href="inleiding.html">Inleiding Databases</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Relationele databases</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#rekenen-met-relaties">Rekenen met relaties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#opdrachten">Opdrachten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relationele-databases/relatie-rekenen-1.html">Rekenen met relaties(1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relationele-databases/meerdere-tabellen.html">Meerdere tabellen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relationele-databases/relatie-rekenen-2.html">Rekenen met relaties (2)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="data-in-meerdere-tabellen.html">Data in meerdere tabellen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="database-ontwerp.html">Database-ontwerp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nosql.html">NoSQL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linked-data.html">Linked data</a></li>
@@ -114,15 +115,15 @@
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="inleiding.html" title="vorig hoofdstuk">Inleiding Databases</a></li>
-      <li>Next: <a href="data-in-meerdere-tabellen.html" title="volgend hoofdstuk">Data in meerdere tabellen</a></li>
+      <li>Next: <a href="relationele-databases/relatie-rekenen-1.html" title="volgend hoofdstuk">Rekenen met relaties(1)</a></li>
   </ul></li>
 </ul>
 </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Snel zoeken</h3>
+  <h3 id="searchlabel">Snel zoeken</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Zoek" />
     </form>
     </div>
@@ -146,52 +147,26 @@
             
   <div class="section" id="relationele-databases">
 <h1>Relationele databases<a class="headerlink" href="#relationele-databases" title="Permalink naar deze titel">¶</a></h1>
-<p>Tabellen zijn altijd belangrijk geweest voor het weergeven van <em>gestructureerde gegevens</em>.
-In een tabel kun je gelijksoortige gegevens op een overzichtelijke manier weergeven.
-Een voorbeeld hiervan is een spreadsheet-tabel.
-Een ander voorbeeld is het gebruik van tabellen in een traditionele boekhouding.</p>
-<blockquote>
-<div><p>Ook in de oudste voorbeelden van het schrift (“spijkerschrift”) komen we tabellen tegen.</p>
-</div></blockquote>
+<p>In een tabel kun je gestructureerde gegevens op een overzichtelijke manier weergeven.
+Een voorbeeld hiervan is een spreadsheet-tabel.</p>
 <p>Relationele databases zijn gebaseerd op tabellen van <em>gelijkvormige gegevens</em>:</p>
 <ul class="simple">
 <li><p>een relationele database is een verzameling tabellen;</p></li>
 <li><p>een tabel is een verzameling rijen;</p></li>
 <li><p>een rij is een verzameling kolomwaarden.</p></li>
 </ul>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="_images/tabel-kolom-rij.png"><img alt="_images/tabel-kolom-rij.png" src="_images/tabel-kolom-rij.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Tabel met rijen en kolommen</span><a class="headerlink" href="#id1" title="Permallink naar deze afbeelding">¶</a></p>
+</div>
 <p>Een kolom identificeer je met een kolomnaam.
-Alle rijen hebben dezelfde kolomnamen.
 Een kolom bevat gelijksoortige gegevens: alle gegevens in die kolom zijn van eenzelfde (data)type,
 bijvoorbeeld tekst, geheel getal, of datum.</p>
-<p>Een rij in een tabel identificeer je met een (unieke) <em>key</em>.</p>
+<p>Een rij in een tabel identificeer je met een <em>key</em> (sleutel).</p>
 <p>Dit betekent dat je elk elementair gegeven in een tabel kunt vinden met de combinatie van rij-<em>key</em>
 en kolomnaam.</p>
 <p>Enkele voorbeelden van tabellen P.M.</p>
-<div class="section" id="rekenen-met-relaties">
-<h2>Rekenen met relaties<a class="headerlink" href="#rekenen-met-relaties" title="Permalink naar deze titel">¶</a></h2>
-<p>Een relationele database wordt zo genoemd omdat een tabel (zoals hierboven beschreven) wiskundig gezien een relatie voorstelt.
-Het rekenen met tabellen kun je dan uitdrukken met relationele operaties.
-Enkele voorbeelden van dit soort operaties:</p>
-<ul class="simple">
-<li><p><em>selectie</em> in een tabel A, op basis van een voorwaarde: het resultaat is een tabel die alleen de rijen van A bevat die aan de voorwaaarde voldoen;</p></li>
-<li><p><em>projectie</em> van een tabel A, op basis van een reeks kolomnamen: het resultaat is een tabel die alleen de kolommen van A bevat met de genoemde namen;</p></li>
-<li><p><em>cartesisch</em> product van tabellen A en B: een tabel met alle combinaties van de rijen van A en B.</p></li>
-<li><p><em>aggregatie</em> (samenvatten) van de waarden in een kolom van een tabel, bijvoorbeeld het optellen van de waarden in een kolom.</p>
-<ul>
-<li><p>(is het resultaat hiervan weer een tabel? met een enkele rij? wat zijn de kolomnamen?)</p></li>
-</ul>
-</li>
-</ul>
-<p>Deze operaties leveren een tabel op, waarmee je weer verder kunt rekenen.
-Dit betekent dat je formules kunt maken die je samenstelt uit tabellen en deze operatoren.
-Het rekenen met relaties is hierdoor een krachtig middel voor het werken met database-gegevens.</p>
-<p>Enkele voorbeelden van selectie, projectie en cartesisch product:</p>
-</div>
-<div class="section" id="opdrachten">
-<h2>Opdrachten<a class="headerlink" href="#opdrachten" title="Permalink naar deze titel">¶</a></h2>
-<p>De oefenopdrachten voor relationele databases vind je in een Jupyter Notebook, zie: <a class="reference external" href="https://github.com/infvo/ieni2018-db/blob/master/python-sqlite.ipynb">python-sqlite.ipynb op GitHub</a></p>
-<p>Dit notebook kun je uitvoeren via deze <a class="reference external" href="https://mybinder.org/v2/gh/infvo/ieni2018-db/master?filepath=python-sqlite.ipynb">Binder-link</a>.
-Je kunt in het notebook je eigen aanpassingen maken, en “spelen” met de data en de database-opdrachten.</p>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -207,11 +182,11 @@ Je kunt in het notebook je eigen aanpassingen maken, en “spelen” met de data
       &copy;2019, SLO.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
-      <a href="_sources/relationele-databases.md.txt"
+      <a href="_sources/relationele-databases.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 
