@@ -49,7 +49,7 @@
     <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Zoeken" href="search.html" />
-    <link rel="next" title="NoSQL" href="nosql.html" />
+    <link rel="next" title="Een logisch model" href="ontwerp/logisch-model.html" />
     <link rel="prev" title="Rekenen met relaties (2)" href="relationele-databases/relatie-rekenen-2.html" />
 
 <script type="text/javascript">
@@ -97,7 +97,8 @@
 <li class="toctree-l1"><a class="reference internal" href="inleiding.html">Inleiding Databases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="relationele-databases.html">Relationele databases</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Database-ontwerp</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#inleiding">Inleiding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ontwerp/logisch-model.html">Een logisch model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ontwerp/fysiek-model.html">Een fysiek model</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="nosql.html">NoSQL</a></li>
@@ -113,7 +114,7 @@
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="relationele-databases/relatie-rekenen-2.html" title="vorig hoofdstuk">Rekenen met relaties (2)</a></li>
-      <li>Next: <a href="nosql.html" title="volgend hoofdstuk">NoSQL</a></li>
+      <li>Next: <a href="ontwerp/logisch-model.html" title="volgend hoofdstuk">Een logisch model</a></li>
   </ul></li>
 </ul>
 </div>
@@ -145,8 +146,6 @@
             
   <div class="section" id="database-ontwerp">
 <h1>Database-ontwerp<a class="headerlink" href="#database-ontwerp" title="Permalink naar deze titel">¶</a></h1>
-<div class="section" id="inleiding">
-<h2>Inleiding<a class="headerlink" href="#inleiding" title="Permalink naar deze titel">¶</a></h2>
 <p>In het vorige hoofdstuk hebben we een relationele database gebruikt voor een eenvoudige webtoepassing.
 In dit hoofdstuk gaan we in op het <em>ontwerpen</em> van databases: hoe kom je tot zo’n database?
 Het resultaat van dit ontwerpproces is een databasemodel.
@@ -154,40 +153,38 @@ De  verdiepende hoofdstukken over database-ontwerp beschrijven de stappen om tot
 Hier gaan we vooral in op de grafische notatie van een databasemodel.
 Zo’n grafisch model gebruik je om te communiceren met de opdrachtgever en gebruikers.
 Als deze tevreden zijn over het model, gebruik je dit voor het maken van de eigenlijke database.</p>
-<div class="section" id="van-analyse-via-databasemodel-naar-databasetabellen">
-<h3>Van analyse via databasemodel naar databasetabellen<a class="headerlink" href="#van-analyse-via-databasemodel-naar-databasetabellen" title="Permalink naar deze titel">¶</a></h3>
+<p class="rubric">Van analyse via databasemodel naar databasetabellen</p>
 <div class="figure align-center" id="id1">
 <a class="reference internal image-reference" href="_images/DB-ontwerpproces.png"><img alt="_images/DB-ontwerpproces.png" src="_images/DB-ontwerpproces.png" style="width: 500px;" /></a>
 <p class="caption"><span class="caption-text">Database-ontwerpproces</span><a class="headerlink" href="#id1" title="Permallink naar deze afbeelding">¶</a></p>
 </div>
 <p>Het proces van het ontwerpen en maken van een database bestaat uit aantal stappen.</p>
 <ul class="simple">
-<li><p>In de ‘Analyse’’ ga je na waarvoor de database bedoeld is, en wie de database gaan gebruiken. Je probeert de <em>informatiebehoefte</em> van de organisatie (de “business”) in kaart te brengen.</p></li>
-<li><p>Voor een groot ontwerp maak je eerst een globaal <strong>conceptueel model</strong>, met alleen de belangrijkste business-elementen.</p></li>
-<li><p>Vervolgens maak je een <strong>logisch model</strong>. In het logische model neem je alle elementen op die relevant zijn voor de informatiebehoefte van de “business”, zonder je daarbij druk te maken over de uiteindelijke (fysieke) database. Een veel gebruikte notatie voor zo’n logisch model is het Entity-Relation Diagram (ERD).</p></li>
+<li><p>In de ‘Analyse’’ ga je na waarvoor de database bedoeld is. Je probeert de <em>informatiebehoefte</em> van de organisatie (de “business”) in kaart te brengen.</p></li>
+<li><p>Voor een groot ontwerp maak je eerst een <strong>conceptueel model</strong>, met alleen de belangrijkste business-elementen.</p></li>
+<li><p>Vervolgens maak je een <strong>logisch model</strong>. In het logische model neem je alle elementen op die relevant zijn voor de informatiebehoefte van de “business”, zonder je daarbij druk te maken over de uiteindelijke (fysieke) database.</p></li>
 <li><p>Tenslotte vertaal je het logische model naar een <strong>fysiek model</strong>. Voor een relationele database vertaal je een entiteit naar een databasetabel, en de attributen naar de kolommen van die tabel.</p></li>
 </ul>
 <p>Bij de analyse en het logisch ontwerp gaat het vooral om het begrijpen van de “business”.
-Via het logische model communiceer je met de opdrachtgever, gebruikers en andere experts uit de “business”, om na te gaan of je inderdaad alle relevante elementen gemodelleerd hebt.</p>
+Via het logische model communiceer je met de opdrachtgever, gebruikers en andere experts uit de “business”, om na te gaan of je inderdaad alle relevante elementen gemodelleerd hebt.
+Je gebruikt daarbij vaak een grafische notatie, zoals Entity-Relation Diagrammen (ERDs).</p>
 <p>Voor het vertalen van logisch model naar fysiek model heb je vooral kennis van databases nodig.
 Het fysieke model gebruik je ook voor de toepassingsprogrammeurs en de gebruikers van de database.</p>
 <p>In de hoofdstukken over Database-ontwerp werken we het bovenstaande ontwerpproces verder uit.
-Hier gaan we vooral in op het ‘’logische model’’, als resultaat van het ontwerpproces.
+Hier gaan we vooral in op het <em>logische model</em>, als resultaat van het ontwerpproces.
 Het kunnen lezen van zo’n model is ook voor potentiële opdrachtgevers en gebruikers van belang,
 om te kunnen communiceren met de ontwerper van de database.</p>
 <p>We geven ook een voorbeeld van een fysiek model als resultaat van de vertaling van het logische model naar een relationele database.</p>
-</div>
-<div class="section" id="databasemodellen-in-soorten">
-<h3>Databasemodellen in soorten<a class="headerlink" href="#databasemodellen-in-soorten" title="Permalink naar deze titel">¶</a></h3>
+<p class="rubric">Databasemodellen in soorten</p>
 <p>Een databasemodel is een model van de wereld zoals die van belang is voor de informatievragen van een organisatie (de “business”).
 Een model is een <em>abstractie</em> met een <em>doel</em>: je laat alle elementen weg die niet relevant zijn voor het doel.</p>
-<p>&gt; Een voorbeeld van een model is een landkaart: bijvoorbeeld een autokaart bevat alleen de details die voor een automobilist van belang zijn, om van A naar B te reizen. Een wandelkaart bevat andere details dan een autokaart: een wandelaar reist veel langzamer en heeft andere informatie nodig.</p>
+<blockquote>
+<div><p>Een voorbeeld van een model is een landkaart: bijvoorbeeld een autokaart bevat alleen de details die voor een automobilist van belang zijn, om van A naar B te reizen. Een wandelkaart bevat andere details dan een autokaart: een wandelaar reist veel langzamer en heeft andere informatie nodig.</p>
+</div></blockquote>
 <p>Je neemt in een model alleen die elementen op die voor het doel van belang zijn.
 In het <em>logische model</em> neem je alleen de elementen op die voor de informatiebehoefte van “business” van belang zijn.
 Je laat de elementen weg die alleen voor de fysieke database van belang zijn.</p>
-</div>
-<div class="section" id="voorbeeldtoepassing">
-<h3>Voorbeeldtoepassing<a class="headerlink" href="#voorbeeldtoepassing" title="Permalink naar deze titel">¶</a></h3>
+<p class="rubric">Voorbeeldtoepassing</p>
 <p>Als voorbeeld gebruiken we een (web)toepassing waarmee gebruikers zich kunnen inschrijven voor verschillende events - zoals bijvoorbeeld schaakwedstrijden.</p>
 <ul class="simple">
 <li><p>Een deelnemer moet zich eerst als lid aanmelden, met voornaam, achternaam en email.</p></li>
@@ -198,7 +195,7 @@ Je laat de elementen weg die alleen voor de fysieke database van belang zijn.</p
 </ul>
 <p>Deze webtoepassing is uitgewerkt in Python en SQLite; deze is te vinden op glitch.com.
 Daar kun je deze toepassing bekijken en er mee spelen. Je kunt er ook een eigen versie (“remix”) van maken.</p>
-</div>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -214,7 +211,7 @@ Daar kun je deze toepassing bekijken en er mee spelen. Je kunt er ook een eigen 
       &copy;2019, SLO.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

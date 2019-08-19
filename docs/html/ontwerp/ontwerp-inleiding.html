@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
   <head>
     <meta charset="utf-8" />
-    <title>Meerdere tabellen &#8212; Databases-0 0.1 documentatie</title>
+    <title>&lt;no title&gt; &#8212; Databases-0 0.1 documentatie</title>
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=808B982A" />
@@ -49,8 +49,6 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Zoeken" href="../search.html" />
-    <link rel="next" title="Rekenen met relaties (2)" href="relatie-rekenen-2.html" />
-    <link rel="prev" title="Rekenen met relaties(1)" href="relatie-rekenen-1.html" />
 
 <script type="text/javascript">
   eBookConfig = {};
@@ -91,16 +89,11 @@
 
 
 <h3>Navigatie</h3>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../voorwoord.html">Voorwoord</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../voorbeelden.html">Voorbeelden</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../inleiding.html">Inleiding Databases</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../relationele-databases.html">Relationele databases</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="relatie-rekenen-1.html">Rekenen met relaties(1)</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Meerdere tabellen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="relatie-rekenen-2.html">Rekenen met relaties (2)</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../relationele-databases.html">Relationele databases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../database-ontwerp.html">Database-ontwerp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../nosql.html">NoSQL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../linked-data.html">Linked data</a></li>
@@ -114,10 +107,6 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
-  <li><a href="../relationele-databases.html">Relationele databases</a><ul>
-      <li>Previous: <a href="relatie-rekenen-1.html" title="vorig hoofdstuk">Rekenen met relaties(1)</a></li>
-      <li>Next: <a href="relatie-rekenen-2.html" title="volgend hoofdstuk">Rekenen met relaties (2)</a></li>
-  </ul></li>
   </ul></li>
 </ul>
 </div>
@@ -147,58 +136,55 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="meerdere-tabellen">
-<h1>Meerdere tabellen<a class="headerlink" href="#meerdere-tabellen" title="Permalink naar deze titel">¶</a></h1>
-<p>Bekijk de onderstaande tabel, met de aanmeldingen van de leden voor een event.</p>
+  <p>In het vorige hoofdstuk hebben we een relationele database gebruikt voor een eenvoudige webtoepassing.
+In dit hoofdstuk gaan we in op het <em>ontwerpen</em> van databases: hoe kom je tot zo’n database?
+Het resultaat van dit ontwerpproces is een databasemodel.
+De  verdiepende hoofdstukken over database-ontwerp beschrijven de stappen om tot zo’n model te komen.
+Hier gaan we vooral in op de grafische notatie van een databasemodel.
+Zo’n grafisch model gebruik je om te communiceren met de opdrachtgever en gebruikers.
+Als deze tevreden zijn over het model, gebruik je dit voor het maken van de eigenlijke database.</p>
+<p class="rubric">Van analyse via databasemodel naar databasetabellen</p>
 <div class="figure align-center" id="id1">
-<a class="reference internal image-reference" href="../_images/redundante-tabel.png"><img alt="../_images/redundante-tabel.png" src="../_images/redundante-tabel.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-text">Een (redundante) tabel met event-aanmeldingen van leden</span><a class="headerlink" href="#id1" title="Permallink naar deze afbeelding">¶</a></p>
+<a class="reference internal image-reference" href="ontwerp/ontwerp/DB-ontwerpproces.png"><img alt="ontwerp/ontwerp/DB-ontwerpproces.png" src="ontwerp/ontwerp/DB-ontwerpproces.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">Database-ontwerpproces</span><a class="headerlink" href="#id1" title="Permallink naar deze afbeelding">¶</a></p>
 </div>
-<p><strong>Redundantie.</strong>
-Je ziet dat in deze tabel de elementaire gegevens van de leden, zoals hun naam en geslacht,
-voor elke aanmelding herhaald worden.
-Deze vorm is daardoor <em>redundant</em> (“overtollig”):
-je kunt deze overtollige gegevens wegwerken zonder verlies aan informatie.
-Bovenstaande redundante vorm heeft twee nadelen:</p>
-<ol class="arabic simple">
-<li><p>je hebt meer opslagruimte nodig dan strikt noodzakelijk;</p></li>
-<li><p>en, belangrijker: het is lastiger om de <em>consistentie</em> van de de gegevens te garanderen,</p></li>
-</ol>
-<p>Met de huidige opslagmedia is (1) niet het grootste probleem meer,
-maar (2) blijft belangrijk.
-Daarom proberen we dergelijke redundante vormen in databases te vermijden.</p>
-<p>In de onderstaande vorm hebben we deze redundantie verwijderd,
-door een extra tabel <code class="docutils literal notranslate"><span class="pre">inschrijvingen</span></code> in te voeren.
-We identificeren een inschijving met behulp van het <code class="docutils literal notranslate"><span class="pre">inschrijfnr</span></code>:
-dat is de <em>key</em> van deze tabel.</p>
-<div class="figure align-center" id="id2">
-<a class="reference internal image-reference" href="../_images/genormaliseerde-tabellen.png"><img alt="../_images/genormaliseerde-tabellen.png" src="../_images/genormaliseerde-tabellen.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-text">Genormaliseerde tabellen voor leden en inschrijvingen</span><a class="headerlink" href="#id2" title="Permallink naar deze afbeelding">¶</a></p>
-</div>
-<p><strong>Foreign key</strong>
-We gebruiken hier een verwijzing van de ene tabel naar de andere:
-een aanmeldingen verwijst naar de overeenkomstige rij in <code class="docutils literal notranslate"><span class="pre">leden</span></code> met behulp van de key <code class="docutils literal notranslate"><span class="pre">lidnr</span></code>.
-Een verwijzing via een <em>key</em> van een andere tabel heet een <em>foreign key</em> in de verwijzende tabel.
-<code class="docutils literal notranslate"><span class="pre">lidnr</span></code> is in de tabel <code class="docutils literal notranslate"><span class="pre">inschrijvingen</span></code> dus een <em>foreign key</em>.</p>
-<p><strong>Normalisatie.</strong>
-Een vorm zonder de redundantie zoals hierboven noemen we een <em>genormaliseerde vorm</em>.
-Het wegwerken van deze redundantie heet dan <em>normaliseren</em>.
-Dit is een onderdeel van het ontwerpen van een relationele database.</p>
-<p><strong>Join: combineren van tabellen.</strong>
-Het gebruik van een verwijzing naar een andere tabel heeft niet alleen voordelen:
-als je een overzicht wilt maken van alle leden, met hun naam, die zich aangemeld hebben voor een bepaalde event,
-dan moeten we de informatie uit beide tabellen combineren.
-In een relationele database kan dit met behulp van een <em>join</em>.
-Dit werken we in het volgende onderdeel verder uit.
-Zo’n join kost extra tijd: we hebben het voordeel van de genormaliseerde vorm uitgewisseld tegen
-extra kosten voor het raadplegen van de database.</p>
-<div class="section" id="opdrachten">
-<h2>Opdrachten<a class="headerlink" href="#opdrachten" title="Permalink naar deze titel">¶</a></h2>
-</div>
-<div class="section" id="toetsvragen">
-<h2>Toetsvragen<a class="headerlink" href="#toetsvragen" title="Permalink naar deze titel">¶</a></h2>
-</div>
-</div>
+<p>Het proces van het ontwerpen en maken van een database bestaat uit aantal stappen.</p>
+<ul class="simple">
+<li><p>In de ‘Analyse’’ ga je na waarvoor de database bedoeld is. Je probeert de <em>informatiebehoefte</em> van de organisatie (de “business”) in kaart te brengen.</p></li>
+<li><p>Voor een groot ontwerp maak je eerst een <strong>conceptueel model</strong>, met alleen de belangrijkste business-elementen.</p></li>
+<li><p>Vervolgens maak je een <strong>logisch model</strong>. In het logische model neem je alle elementen op die relevant zijn voor de informatiebehoefte van de “business”, zonder je daarbij druk te maken over de uiteindelijke (fysieke) database.</p></li>
+<li><p>Tenslotte vertaal je het logische model naar een <strong>fysiek model</strong>. Voor een relationele database vertaal je een entiteit naar een databasetabel, en de attributen naar de kolommen van die tabel.</p></li>
+</ul>
+<p>Bij de analyse en het logisch ontwerp gaat het vooral om het begrijpen van de “business”.
+Via het logische model communiceer je met de opdrachtgever, gebruikers en andere experts uit de “business”, om na te gaan of je inderdaad alle relevante elementen gemodelleerd hebt.
+Je gebruikt daarbij vaak een grafische notatie, zoals Entity-Relation Diagrammen (ERDs).</p>
+<p>Voor het vertalen van logisch model naar fysiek model heb je vooral kennis van databases nodig.
+Het fysieke model gebruik je ook voor de toepassingsprogrammeurs en de gebruikers van de database.</p>
+<p>In de hoofdstukken over Database-ontwerp werken we het bovenstaande ontwerpproces verder uit.
+Hier gaan we vooral in op het <em>logische model</em>, als resultaat van het ontwerpproces.
+Het kunnen lezen van zo’n model is ook voor potentiële opdrachtgevers en gebruikers van belang,
+om te kunnen communiceren met de ontwerper van de database.</p>
+<p>We geven ook een voorbeeld van een fysiek model als resultaat van de vertaling van het logische model naar een relationele database.</p>
+<p class="rubric">Databasemodellen in soorten</p>
+<p>Een databasemodel is een model van de wereld zoals die van belang is voor de informatievragen van een organisatie (de “business”).
+Een model is een <em>abstractie</em> met een <em>doel</em>: je laat alle elementen weg die niet relevant zijn voor het doel.</p>
+<blockquote>
+<div><p>Een voorbeeld van een model is een landkaart: bijvoorbeeld een autokaart bevat alleen de details die voor een automobilist van belang zijn, om van A naar B te reizen. Een wandelkaart bevat andere details dan een autokaart: een wandelaar reist veel langzamer en heeft andere informatie nodig.</p>
+</div></blockquote>
+<p>Je neemt in een model alleen die elementen op die voor het doel van belang zijn.
+In het <em>logische model</em> neem je alleen de elementen op die voor de informatiebehoefte van “business” van belang zijn.
+Je laat de elementen weg die alleen voor de fysieke database van belang zijn.</p>
+<p class="rubric">Voorbeeldtoepassing</p>
+<p>Als voorbeeld gebruiken we een (web)toepassing waarmee gebruikers zich kunnen inschrijven voor verschillende events - zoals bijvoorbeeld schaakwedstrijden.</p>
+<ul class="simple">
+<li><p>Een deelnemer moet zich eerst als lid aanmelden, met voornaam, achternaam en email.</p></li>
+<li><p>De organisatie maakt een lijst van events;  een event wordt gegeven door een datum en een beschrijving.</p></li>
+<li><p>Een lid kan zich voor een (of meer) event inschrijven; bij inschrijving moet een keuze gemaakt worden uit de verschillende alternatieve maaltijden.</p></li>
+<li><p>Een lid kan zijn/haar inschrijvingen achteraf aanpassen.</p></li>
+<li><p>Een event-organisator kan een overzicht krijgen van de inschrijvingen voor een event.</p></li>
+</ul>
+<p>Deze webtoepassing is uitgewerkt in Python en SQLite; deze is te vinden op glitch.com.
+Daar kun je deze toepassing bekijken en er mee spelen. Je kunt er ook een eigen versie (“remix”) van maken.</p>
 
 
           </div>
@@ -212,11 +198,11 @@ extra kosten voor het raadplegen van de database.</p>
       &copy;2019, SLO.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
-      <a href="../_sources/relationele-databases/meerdere-tabellen.rst.txt"
+      <a href="../_sources/ontwerp/ontwerp-inleiding.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 
