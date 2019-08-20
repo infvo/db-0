@@ -44,9 +44,9 @@ Opdrachten
 ----------
 
 De oefenopdrachten voor relationele databases vind je in een Jupyter Notebook.
-Dit kun je uitvoeren met de volgende 
-`Binder-opdracht <https://mybinder.org/v2/gh/infvo/ieni2018-db/master?filepath=python-sqlite.ipynb>`_.
-Je kunt in het notebook je eigen aanpassingen maken, en "spelen" met de data en de database-opdrachten.
+Dit kun je uitvoeren met de volgende
+`Binder-opdracht <https://mybinder.org/v2/gh/infvo/ieni2019-SQL.git/master?filepath=Inhoud.ipynb>`_.
+Je kunt in deze notebooks je eigen aanpassingen maken, en "spelen" met de data en de database-opdrachten.
 
-De broncode van het notebook vind je op GitHub, zie
-zie: `python-sqlite.ipynb op GitHub <https://github.com/infvo/ieni2018-db/blob/master/python-sqlite.ipynb>`_
+De broncode van de notebooks vind je op GitHub,
+zie: `SQL notebooks op GitHub <https://github.com/infvo/ieni2019-SQL>`_

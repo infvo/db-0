@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
   <head>
     <meta charset="utf-8" />
-    <title>Een logisch model &#8212; Databases-0 0.1 documentatie</title>
+    <title>Instanties &#8212; Databases-0 0.1 documentatie</title>
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=808B982A" />
@@ -49,8 +49,6 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Zoeken" href="../search.html" />
-    <link rel="next" title="Een fysiek model" href="fysiek-model.html" />
-    <link rel="prev" title="Database-ontwerp" href="../database-ontwerp.html" />
 
 <script type="text/javascript">
   eBookConfig = {};
@@ -91,16 +89,12 @@
 
 
 <h3>Navigatie</h3>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../voorwoord.html">Voorwoord</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../voorbeelden.html">Voorbeelden</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../inleiding.html">Inleiding Databases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../relationele-databases.html">Relationele databases</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../database-ontwerp.html">Database-ontwerp</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Een logisch model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fysiek-model.html">Een fysiek model</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../database-ontwerp.html">Database-ontwerp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../nosql.html">NoSQL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../linked-data.html">Linked data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../toetsvragen.html">Toetsvragen</a></li>
@@ -113,10 +107,6 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
-  <li><a href="../database-ontwerp.html">Database-ontwerp</a><ul>
-      <li>Previous: <a href="../database-ontwerp.html" title="vorig hoofdstuk">Database-ontwerp</a></li>
-      <li>Next: <a href="fysiek-model.html" title="volgend hoofdstuk">Een fysiek model</a></li>
-  </ul></li>
   </ul></li>
 </ul>
 </div>
@@ -146,83 +136,45 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="een-logisch-model">
-<h1>Een logisch model<a class="headerlink" href="#een-logisch-model" title="Permalink naar deze titel">¶</a></h1>
-<p>We geven hier een voorbeeld een logisch model in de vorm van een Entity-Relationship Diagram.
-We gebruiken weer hetzelfde voorbeeld als in het vorige hoofdstuk:
-een webtoepassing waarmee leden zich kunnen inschrijven voor één of meer events.</p>
-<div class="figure align-center" id="id1">
-<a class="reference internal image-reference" href="../_images/Model-0.png"><img alt="../_images/Model-0.png" src="../_images/Model-0.png" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-text">Entity-Relationship diagram - eerste stap</span><a class="headerlink" href="#id1" title="Permallink naar deze afbeelding">¶</a></p>
+  <div class="section" id="instanties">
+<h1>Instanties<a class="headerlink" href="#instanties" title="Permalink naar deze titel">¶</a></h1>
+<p>Een entiteit beschrijft alle mogelijke instanties van die “klasse”.
+Op dezelfde manier beschrijft het logische model alle mogelijke combinaties van instanties.
+Dit zie je ook terug in de ERDish-zinnen: “Elk lid heeft een voornaam, een achternaam, een email-adres, en 0 of meer inschrijvingen.”
+Het is soms lastig om de gevolgen van zulke uitspraken te begrijpen.</p>
+<p>In de communicatie met de opdrachtgever kan het handig zijn om voorbeelden (en tegenvoorbeelden) van instanties te geven,
+om de randgevallen van deze uitspraken te controleren.</p>
 </div>
-<p>Dit is een eerste, nog onvolledige stap naar het logische model.
-De belangrijkste elementen in het model zijn:</p>
+<div class="section" id="constraints">
+<h1>Constraints<a class="headerlink" href="#constraints" title="Permalink naar deze titel">¶</a></h1>
+<p>(In dit voorbeeld hebben we geen andere constraints dan die voor de multipliciteit.)
+NB: deze constraints zijn “business rules” die de data in de database bepalen/beperken.</p>
+</div>
+<div class="section" id="redundantie-normalisatie">
+<h1>Redundantie/normalisatie<a class="headerlink" href="#redundantie-normalisatie" title="Permalink naar deze titel">¶</a></h1>
 <ul class="simple">
-<li><p>Lid: een entiteit</p></li>
-<li><p>Event: een entiteit</p></li>
-<li><p>Inschrijving: een relatie tussen Lid en Event.</p></li>
+<li><p>‘’’Opmerking’’’: de rol van normalisatie in het logische model verschilt van die in het fysieke model! Uitleggen…</p></li>
 </ul>
-<p>Een <strong>Entiteit</strong> is een concreet of abstract “ding” dat betekenis heeft in de organisatie (“business”).
-Je geeft een entiteit aan met een zelfstandig naamwoord.
-In een E-R diagram gebruiken we een rechthoek met daarin de naam van de entiteit.</p>
-<p>Een <strong>Relatie</strong> geeft het verband tussen twee of meer entiteiten weer.
-Je geeft een relatie aan met een werkwoord (bijvoorbeeld “inschrijven”) of een werkwoordsvorm (“inschrijving”).
-In een E-R diagram gebruiken we een ruit met daarin de naam van de relatie.</p>
-<p>Je kunt het bovenstaande lezen als: een Lid heeft zich ingeschreven voor een Event.</p>
-<div class="section" id="multipliciteit">
-<h2>Multipliciteit<a class="headerlink" href="#multipliciteit" title="Permalink naar deze titel">¶</a></h2>
-<div class="figure align-right" id="id2">
-<a class="reference internal image-reference" href="../_images/ERD-Multipliciteit.png"><img alt="../_images/ERD-Multipliciteit.png" src="../_images/ERD-Multipliciteit.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-text">Kraaienpootnotatie voor multipliciteit</span><a class="headerlink" href="#id2" title="Permallink naar deze afbeelding">¶</a></p>
-</div>
-<p>In de figuur hierboven zie je ook wat de multipliciteit is van de relatie,
-aan de hand de kraaienpoot-notatie.
-Je ziet dan direct of er sprake is van een 1-1 relatie, een 1-N relatie, of een N-M relatie;
-en of de relatie optioneel is (0 als ondergrens) of verplicht (1 als ondergrens).</p>
-<p>Zo’n kraaienpoot kun je zien als een speciale pijl die je leest als “heeft”.
-Het onderwerp van de zin staat aan het begin van de pijl;
-de relatie beschrijf je als een werkwoordsvorm;
-het aantal staat aan de kant van de pijlpunt, bij het lijdend voorwerp in de zin.</p>
-<p>Uit de ERD-figuur hierboven kunnen we dan aflezen:</p>
+<p>(In dit voorbeeld hebben we geen redundantie; het is in genormaliseerde vorm.)</p>
 <ul class="simple">
-<li><p><em>elk</em> Lid heeft zich ingeschreven voor 0 of meer Events;</p></li>
-<li><p><em>elk</em> Event heeft 0 of meer ingeschreven Leden.</p></li>
+<li><p>redundantie/normalisatie</p></li>
 </ul>
-<p>Aan de hand van dergelijke “ERDish” zinnen kan een ontwerper nagaan bij een gebruiker of domein-expert of hij de organisatie of toepassing goed begrepen heeft.</p>
-<blockquote>
-<div><p><em>Opmerking.</em> Soms kom je de term <em>cardinaliteit</em> tegen in plaats van <em>multipliciteit</em>. We volgen hier de terminologie en de motivatie erachter van <a class="reference external" href="https://martinfowler.com/bliki/MultiplicityNotCardinality.html">Martin Fowler</a>.</p>
-</div></blockquote>
-<ul class="simple">
-<li><p><a class="reference external" href="https://nl.wikipedia.org/wiki/Entity-relationshipmodel">Wikipedia: Entity-Relationshipmodel</a></p></li>
-</ul>
-</div>
-<div class="section" id="attributen">
-<h2>Attributen<a class="headerlink" href="#attributen" title="Permalink naar deze titel">¶</a></h2>
-<p>We hebben in het model meer details nodig over de entiteiten en de relaties,
-in de vorm van attributen.</p>
-<p>Een <strong>attribuut</strong> beschrijft een eigenschap van een entiteit of relatie.</p>
-<div class="figure align-center" id="id3">
-<a class="reference internal image-reference" href="../_images/Model-1.png"><img alt="../_images/Model-1.png" src="../_images/Model-1.png" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-text">E-R model met entiteiten, relatie en attributen</span><a class="headerlink" href="#id3" title="Permallink naar deze afbeelding">¶</a></p>
-</div>
-<p>In de bovenstaande figuur zien we het volgende:</p>
-<ul class="simple">
-<li><p>de entiteit Lid heeft als attributen: <em>email</em>-adres, voornaam, achternaam;</p></li>
-<li><p>de entiteit Event heeft als attributen: <em>datum</em>, <em>beschrijving</em>;</p></li>
-<li><p>de relatie Inschrijving heeft als attribuut: maaltijd (-keuze).</p></li>
-</ul>
-</div>
-<div class="section" id="identificatie">
-<h2>Identificatie<a class="headerlink" href="#identificatie" title="Permalink naar deze titel">¶</a></h2>
-<p>De namen van enkele van de attributen zijn in de figuur onderstreept.
-Hiermee geef je aan dat deze attributen de bijbehorende entiteit <em>identificeren</em>:</p>
-<ul class="simple">
-<li><p>het attribuut <em>email</em> identificeert een Lid;</p></li>
-<li><p>de combinatie van <em>datum</em> en <em>beschrijving</em> identificeert een Event.</p></li>
-</ul>
-<p>Dit is de <strong>unieke identificatie (UID)</strong> van de entiteiten zoals de “business” dit gebruikt.</p>
-<p>Later gaan we in op de identificatie van een Inschrijving.</p>
-</div>
+<p>De belangrijkste regel voor normalisatie is dat elk feit maar één keer in het model voorkomt.
+Dit heet ook wel: het model bevat geen redundantie.</p>
+<p>Voorbeelden van redundantie:
+* afgeleide feiten, bijvoorbeeld leeftijd (kun je uitrekenen uit de geboortedatum en de huidige datum);
+* herhaalde feiten, bijvoorbeeld: als je bij de naam van een leerling in een cijfertabel ook steeds het adres en het telefoonnummer noemt. Een leerling komt waarschijnlijk vaker dan één keer in de tabel voor: hetzelfde adres en telefoonnummer moet dan steeds herhaald worden.</p>
+<p>De regel is dan dat elk attribuut van een entiteit alleen en volledig afhangt van de primaire sleutel (UID) van die entiteit.
+Anders gezegd:
+* een attribuut hangt niet af van andere attributen (dan de primary key);
+*</p>
+<p>Wat bedoelen we hier met “afhangen van”?
+* A hangt af van B betekent: als je A verandert, moet je ook B aanpassen.
+** bijvoorbeeld: als je de naam van een leerling verandert in de cijfertabel, bijvoorbeeld omdat je eerst een foute naam genoteerd had, moet je ook het adres en het telefoonnummer aanpassen.</p>
+<p>“Afhangen van” is eigenschap van “de business”: je kunt deze vraag alleen beantwoorden met kennis van de business (de “wereld”).</p>
+<p>Waarom normaliseren?
+*</p>
+<p>Het fysieke model kunnen we eventueel “de-normaliseren”: we kunnen bepaalde afgeleide gegevens bewaren, of we kunnen gegevens op meerdere plekken in de database opslaan. Dat maakt het lastiger en minder efficiënt om veranderingen op een consistente manier door te voeren. Een belangrijke reden om dit toch te doen is om bepaalde gegevens sneller te kunnen opvragen.</p>
 </div>
 
 
@@ -241,7 +193,7 @@ Hiermee geef je aan dat deze attributen de bijbehorende entiteit <em>identificer
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
-      <a href="../_sources/ontwerp/logisch-model.rst.txt"
+      <a href="../_sources/ontwerp/logisch-model-rest.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 
