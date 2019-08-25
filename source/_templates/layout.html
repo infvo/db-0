@@ -1,6 +1,11 @@
 {% extends "!layout.html" %}
 
-{% set script_files = ['_static/runestonebase.js'] + script_files + [
+
+{%
+ set script_files = ['_static/runestonebase.js'] + script_files
+%}
+{#
+  + [
     '_static'+'/jquery-ui-1.10.3.custom.min.js',
     '_static'+'/jquery-fix.js',
     '_static'+'/waypoints.min.js',
@@ -13,7 +18,8 @@
     '_static'+'/jquery.hotkey.js',
     '_static'+'/jquery-migrate-1.2.1.min.js'
   ]
-%}
+#}
+
 
 {%- block extrahead %}
 

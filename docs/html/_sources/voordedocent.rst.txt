@@ -9,17 +9,17 @@ Waar vind ik het materiaal?
 
   * dit document (https://infvo.github.io/db-0)
   * voorbeeldtoepassing: `glitch-project <https://glitch.com/~succulent-colon>`_ en `live toepassing <https://succulent-colon.glitch.me>`_.
-  * relationele databases: oefenopdrachten in een `Jupyter Notebook <https://github.com/infvo/ieni2018-db/blob/master/python-sqlite.ipynb>`_,
-    uit te voeren via deze `Binder-link <https://mybinder.org/v2/gh/infvo/ieni2018-db/master?filepath=python-sqlite.ipynb>`_.
+  * relationele databases: oefenopdrachten in een reeks `Jupyter Notebooks <https://github.com/infvo/ieni2019-SQL>`_,
+    uit te voeren via `Binder: SQL <https://mybinder.org/v2/gh/infvo/ieni2019-SQL.git/master?filepath=Inhoud.ipynb>`_.
 
 * SQL: https://sql.informaticavo.nl (materiaal met interactieve opdrachten)
-* `Database-design (PDF-document) <_static/files/cursus-databasedesign-versie-3a.pdf>`_
+* `Database-design <https://creatief.github.io>`_
 * NoSQL/MongoDB:
 
   * `Cursusmateriaal <https://infvo.github.io/nosql-ld>`_
-  * Praktische/oefenopdrachten: Jupyter Notebooks op GitHub: https://github.com/infvo/ieni2018-db.
-    Voor het uitvoeren van deze notebooks is (op aanvraag) een aparte server beschikbaar;
-    aan een alternatief (via Binder of vergelijkbaar) wordt gewerkt.
+  * MongoDB oefenopdrachten: Jupyter Notebooks op GitHub: https://github.com/eelcodijkstra/mongodb-binder,
+  * uit te voeren via `Binder: MongoDB <https://mybinder.org/v2/gh/eelcodijkstra/mongodb-binder.git/master?filepath=Inhoud.ipynb>`_
+  * (als dit niet werkt, is als alternatief op aanvraag een aparte server beschikbaar)
 
 Feedback op het materiaal kan in veel gevallen via hypothes.is (zie de rechter bovenhoek).
 Ook kun je hiervoor terecht op het `i&i forum <https://ieni-forum.infvo.nl/c/lesmateriaal/SLO-databases>`_.

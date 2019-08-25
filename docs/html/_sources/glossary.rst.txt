@@ -52,4 +52,8 @@ Begrippenlijst
 
   multipliciteit
     de multipliciteit van een relatie beschijft het minimum en het maximum aantal elementen dat in een relatie betrokken is.
-    
+
+  index 
+    een database-index is een hulpstructuur om efficiënt te zoeken. Een index is meestal gekoppeld aan een kolom of veld.
+    Je kunt meerdere indexen (indices) gebruiken voor eenzelfde database-tabel of -collectie,
+    voor verschillende kolommen of velden.

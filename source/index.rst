@@ -10,13 +10,11 @@ Welkom bij Databases-0
    :maxdepth: 2
 
    voorwoord.rst
-   inleiding.md
-   relationele-databases.md
-   data-in-meerdere-tabellen.md
-   database-ontwerp.md
-   nosql.md
-   linked-data.md
-   toetsvragen.rst
+   inleiding.rst
+   relationele-databases.rst
+   database-ontwerp.rst
+   nosql.rst
+   verdieping.rst
    glossary.rst
    voordedocent.rst
    colofon.md

@@ -2,9 +2,10 @@
 
 **Concepten en leerdoelen**
 
-* analyse, logisch model, fysiek model
+* ontwerpproces: analyse, logisch modelleren, fysiek modelleren
+* logisch model, fysiek model
 * informatiebehoefte
-* model, modelleren
+* model, modelleren, logisch model, fysiek model
 * E-R model, entiteit, attribuut, relatie
 * constraints
 * redundantie, normaalvorm
@@ -13,43 +14,39 @@
 
 **Van analyse via database-ontwerp naar database-tabellen**
 
-Het ontwerpen en maken van een database gebeurt meestal in een aantal stappen.
+Het ontwerpen en maken van een database doe je meestal in een aantal stappen.
 
-* In de *Analyse* probeer je te achterhalen wie de database gaan gebruiken, waarvoor en hoe. Welke eisen stellen zij aan het resultaat?
-In het bijzonder probeer je de *informatiebehoefte* van de verschillende gebruikers in kaart te brengen.
-* Op basis van dit resultaat maak je een *Logisch ontwerp*.
-Dit kun je weergeven als Entity-Relationship (E-R) model.
-In dit datamodel probeer je alle relevante elementen en aspecten van de database te formuleren,
-zonder je daarbij druk te maken over de manier waarop dit in een database vormgegeven kan worden.
-* Vervolgens vertaal je het E-R model naar een *fysiek model* ofwel het *fysieke schema* van een database. Voor een relationele database betekent dit dat je een entiteit vertaalt naar een tabel, en de attributen naar de kolommen van die tabel. Een relatie kun je op meerdere manieren vertalen, afhankelijk van de eigenschappen van de relatie.
+* In de *Analyse* ga je na waarvoor de database bedoeld is, en wie de database gaan gebruiken.
+Je probeert de *informatiebehoefte* van de organisatie (de "business") in kaart te brengen.
+* Vervolgens maak je een *logisch model*. In dit model probeer je alle elementen op te nemen die relevant zijn voor de informatiebehoefte van de "business", zonder je daarbij druk te maken over de manier waarop dit in een ("fysieke") database vormgegeven kan worden. Een veel gebruikte notatie voor zo'n logisch model is het Entity-Relation Diagram (ERD).
+* Vervolgens vertaal je het logische model naar een *fysiek model*. Voor een relationele database betekent dit dat je een entiteit vertaalt naar een tabel, en de attributen naar de kolommen van die tabel. Je legt ook de datatype van de kolommen vast.
 
-**Iteratief ontwerp.**
-In de praktijk gebruik je niet altijd een dergelijke top-down of waterval-aanpak.
-Vaak wisselen de verschillende stappen elkaar af.
-Uit een eerste analyse maak je een eerste E-R model, bijvoorbeeld voor een deel van de informatiebehoefte; daarmee maak je een eerste versie van de database.
-Vervolgens neem je een volgend deel van de informatiebehoefte, en pas je, mede op basis van de ervaringen met die eerste versie, het E-R model aan, en vervolgens de eigenlijke database.
+Voor een groot ontwerp maak je soms eerst een globaal *conceptuel model* voordat je begint aan het meer gedetailleerde *logische model*.
 
-**Database-evolutie**
-Ook als je op zo'n iteratieve manier werkt heb je te maken met resultaten op verschillende niveaus: analyse, logisch ontwerp en fysiek ontwerp. Deze resultaten leg je steeds afzonderlijk vast: de analyse en het ontwerp vormen belangrijke documentatie bij de database.
+Bij de Analyse en het maken van het logische model gaat het vooral om het begrijpen van de "business".
+Het logische model vormt een middel om te communiceren met de opdrachtgever, gebruikers en andere experts uit de "business", om na te gaan of je inderdaad alle relevante elementen gemodelleerd hebt.
 
-Het ontwerpen van een database is niet afgelopen nadat deze in gebruik genomen is.
-Er ontstaan nieuwe informatiebehoeftes, waarvoor je het ontwerp en de database moet aanpassen.
-Dit kan wel betekenen dat je bestaande data in de database moet *migreren* naar een nieuwe versie.
+Voor de vertaalslag van logisch model naar fysiek model heb je vooral implementatiekennis van databases nodig.
 
-In dit onderdeel gaan we vooral in op de tweede stap: het maken van een E-R model.
-We gaan kort in op de manier waarop je dit vertaalt naar een fysiek model: de tabellen en constraints van een relationele database.
+In de hoofdstukken over Database-ontwerp werken we het bovenstaande ontwerpproces verder uit.
+Hier gaan we vooral in op het *logische model*, als resultaat van het ontwerpproces.
+het kunnen lezen van zo'n model is ook voor potentiële opdrachtgevers en gebruikers van belang,
+om te kunnen communiceren met de ontwerper van de database.
+
+We geven ook een voorbeeld van een fysiek model als resultaat van de vertaling van het logische model naar een relationele database.
 
 ## Voorbeeldtoepassing
 
 Als voorbeeld gebruiken we een (web)toepassing waarmee gebruikers zich kunnen inschrijven voor verschillende events - zoals bijvoorbeeld schaakwedstrijden.
-Een deelnemer moet zich eerst als lid aanmelden, met voornaam, achternaam en email.
-Een aangemeld lid kan zich bij verschillende events (op verschillende data) inschrijven.
-Bij inschrijving maakt een lid een keuze uit de verschillende maaltijden bij deze event.
-Een lid kan zijn/haar inschrijvingen achteraf aanpassen.
-Een event-organisator kan een overzicht krijgen van de inschrijvingen voor een event.
 
-De verschillende events zijn met hun gegevens (datum, maaltijdkeuze) "hard gecodeerd" in de toepassing.
-(Deze hoeven niet in de database opgenomen te worden.)
+* Een deelnemer moet zich eerst als lid aanmelden, met voornaam, achternaam en email.
+* De organisatie maakt een lijst van events;  een event wordt gegeven door een datum en een beschrijving.
+* Een lid kan zich voor een (of meer) event inschrijven; bij inschrijving moet een keuze gemaakt worden uit de verschillende alternatieve maaltijden.
+* Een lid kan zijn/haar inschrijvingen achteraf aanpassen.
+* Een event-organisator kan een overzicht krijgen van de inschrijvingen voor een event.
+
+Deze webtoepassing is uitgewerkt in Python en SQLite; deze is te vinden op glitch.com.
+Daar kun je deze toepassing bekijken en er mee spelen. Je kunt er ook een eigen versie ("remix") van maken.
 
 ### Analyse
 
