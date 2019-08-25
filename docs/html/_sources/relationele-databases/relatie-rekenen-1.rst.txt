@@ -1,6 +1,6 @@
-
-Rekenen met relaties(1)
-=======================
+************************
+Rekenen met relaties (1)
+************************
 
 Een relationele database wordt zo genoemd omdat een tabel (zoals hierboven beschreven) wiskundig gezien een relatie voorstelt.
 Het rekenen met tabellen kun je dan uitdrukken met relationele operaties.

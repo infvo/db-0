@@ -36,17 +36,6 @@
     <script type="text/javascript" src="_static/reveal.js?v=9C3AAF60"></script>
     <script type="text/javascript" src="_static/tabbedstuff.js?v=5BE6106"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
-    <script type="text/javascript" src="_static/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/waypoints.min.js"></script>
-    <script type="text/javascript" src="_static/rangy-core.js"></script>
-    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
-    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
-    <script type="text/javascript" src="_static/user-highlights.js"></script>
-    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
-    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
-    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
-    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Zoeken" href="search.html" />
     <link rel="next" title="Colofon" href="colofon.html" />
@@ -93,13 +82,11 @@
 <h3>Navigatie</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="voorwoord.html">Voorwoord</a></li>
-<li class="toctree-l1"><a class="reference internal" href="voorbeelden.html">Voorbeelden</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inleiding.html">Inleiding Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inleiding.html">Inleiding databases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="relationele-databases.html">Relationele databases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="database-ontwerp.html">Database-ontwerp</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nosql.html">NoSQL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linked-data.html">Linked data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="toetsvragen.html">Toetsvragen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nosql.html">NoSQL en Linked Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verdieping.html">Verdieping</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Begrippenlijst</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Voor de docent</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#waar-vind-ik-het-materiaal">Waar vind ik het materiaal?</a></li>
@@ -153,18 +140,18 @@
 <ul>
 <li><p>dit document (<a class="reference external" href="https://infvo.github.io/db-0">https://infvo.github.io/db-0</a>)</p></li>
 <li><p>voorbeeldtoepassing: <a class="reference external" href="https://glitch.com/~succulent-colon">glitch-project</a> en <a class="reference external" href="https://succulent-colon.glitch.me">live toepassing</a>.</p></li>
-<li><p>relationele databases: oefenopdrachten in een <a class="reference external" href="https://github.com/infvo/ieni2018-db/blob/master/python-sqlite.ipynb">Jupyter Notebook</a>,
-uit te voeren via deze <a class="reference external" href="https://mybinder.org/v2/gh/infvo/ieni2018-db/master?filepath=python-sqlite.ipynb">Binder-link</a>.</p></li>
+<li><p>relationele databases: oefenopdrachten in een reeks <a class="reference external" href="https://github.com/infvo/ieni2019-SQL">Jupyter Notebooks</a>,
+uit te voeren via <a class="reference external" href="https://mybinder.org/v2/gh/infvo/ieni2019-SQL.git/master?filepath=Inhoud.ipynb">Binder: SQL</a>.</p></li>
 </ul>
 </li>
 <li><p>SQL: <a class="reference external" href="https://sql.informaticavo.nl">https://sql.informaticavo.nl</a> (materiaal met interactieve opdrachten)</p></li>
-<li><p><a class="reference external" href="_static/files/cursus-databasedesign-versie-3a.pdf">Database-design (PDF-document)</a></p></li>
+<li><p><a class="reference external" href="https://creatief.github.io">Database-design</a></p></li>
 <li><p>NoSQL/MongoDB:</p>
 <ul>
 <li><p><a class="reference external" href="https://infvo.github.io/nosql-ld">Cursusmateriaal</a></p></li>
-<li><p>Praktische/oefenopdrachten: Jupyter Notebooks op GitHub: <a class="reference external" href="https://github.com/infvo/ieni2018-db">https://github.com/infvo/ieni2018-db</a>.
-Voor het uitvoeren van deze notebooks is (op aanvraag) een aparte server beschikbaar;
-aan een alternatief (via Binder of vergelijkbaar) wordt gewerkt.</p></li>
+<li><p>MongoDB oefenopdrachten: Jupyter Notebooks op GitHub: <a class="reference external" href="https://github.com/eelcodijkstra/mongodb-binder">https://github.com/eelcodijkstra/mongodb-binder</a>,</p></li>
+<li><p>uit te voeren via <a class="reference external" href="https://mybinder.org/v2/gh/eelcodijkstra/mongodb-binder.git/master?filepath=Inhoud.ipynb">Binder: MongoDB</a></p></li>
+<li><p>(als dit niet werkt, is als alternatief op aanvraag een aparte server beschikbaar)</p></li>
 </ul>
 </li>
 </ul>
@@ -256,7 +243,7 @@ Uitwerkingen van opdrachten zijn t.z.t. ook daar te vinden.</p>
       &copy;2019, SLO.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

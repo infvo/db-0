@@ -12,12 +12,12 @@ voor personen enkele decennia,
 en voor historisch inzicht milennia.
 
 Databases zijn al zo oud als het schrift: ook voor de komst van de computer zijn er veel gegevens in databases georganiseerd.
-Het gebruik van computers maakt dat we anders met dit soort gegevens om kunnen gaan:
+Het gebruik van computers maakt dat je anders met dit soort gegevens om kunnen gaan. Je kunt:
 
-* we kunnen deze gegevens veel gemakkelijker delen met anderen, waardoor we ervoor kunnen zorgen dat iedereen op elk moment de juiste gegevens heeft;
-* we kunnen veel gemakkelijker met grote verzamelingen gegevens werken;
-* we kunnen met veel complexere gegevens werken;
-* we kunnen veel sneller beslissingen nemen - op basis van actuele gegevens.
+* gegevens gemakkelijk delen met anderen, waarbij iedereen steeds de juiste gegevens heeft;
+* werken met grote verzamelingen gegevens;
+* werken met complexe gegevens ;
+* snel beslissingen nemen - op basis van actuele gegevens.
 
 Bij het bovenstaande speelt *database-technologie* een belangrijke rol.
 Deze biedt onder andere de volgende mogelijkheden:

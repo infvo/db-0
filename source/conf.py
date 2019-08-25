@@ -36,6 +36,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
     'sphinx.ext.ifconfig',
+
     'runestone.common', 'runestone.meta', 'runestone.assignment',
     'runestone.question', 'runestone.assess', 'runestone.shortanswer',
     'runestone.accessibility', 'runestone.dragndrop',  'runestone.poll',
@@ -43,6 +44,7 @@ extensions = [
     'runestone.utility',
     'recommonmark',
 ]
+#]   + runestone_extensions()
 
 source_suffix = {
     '.rst': 'restructuredtext',

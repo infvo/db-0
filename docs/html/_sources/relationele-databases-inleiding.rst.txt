@@ -1,6 +1,4 @@
-*********************
-Relationele databases
-*********************
+.. inleiding relationele databases
 
 In een tabel kun je gestructureerde gegevens op een overzichtelijke manier weergeven.
 Een voorbeeld hiervan is een spreadsheet-tabel.

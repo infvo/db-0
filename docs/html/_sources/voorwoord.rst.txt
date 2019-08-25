@@ -52,7 +52,7 @@ Het materiaal bestaat uit:
 * een inleiding (dit document) in de onderwerpen van het database-thema: (i) SQL;
   (ii) database-ontwerp; (iii) NoSQL en Linked Data
 * `SQL <https://sql.informaticavo.nl>`_ - als querytaal voor relationele databases;
-* Database-ontwerp (link): van analyse tot Entity-Relationship-model;
+* `Database-ontwerp <https://creatief.github.io/>`_ - van analyse tot Entity-Relationship-model;
 * `NoSQL en Linked Data <https://infvo.github.io/nosql-ld>`_.
 
 De links hierboven verwijzen naar het materiaal voor het betreffende onderdeel.

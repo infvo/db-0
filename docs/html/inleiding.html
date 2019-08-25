@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
   <head>
     <meta charset="utf-8" />
-    <title>Inleiding Databases &#8212; Databases-0 0.1 documentatie</title>
+    <title>Inleiding databases &#8212; Databases-0 0.1 documentatie</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/accessibility.css?v=808B982A" />
@@ -36,21 +36,10 @@
     <script type="text/javascript" src="_static/reveal.js?v=9C3AAF60"></script>
     <script type="text/javascript" src="_static/tabbedstuff.js?v=5BE6106"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
-    <script type="text/javascript" src="_static/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/waypoints.min.js"></script>
-    <script type="text/javascript" src="_static/rangy-core.js"></script>
-    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
-    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
-    <script type="text/javascript" src="_static/user-highlights.js"></script>
-    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
-    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
-    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
-    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Zoeken" href="search.html" />
     <link rel="next" title="Relationele databases" href="relationele-databases.html" />
-    <link rel="prev" title="Voorbeelden" href="voorbeelden.html" />
+    <link rel="prev" title="Voorwoord" href="voorwoord.html" />
 
 <script type="text/javascript">
   eBookConfig = {};
@@ -93,17 +82,16 @@
 <h3>Navigatie</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="voorwoord.html">Voorwoord</a></li>
-<li class="toctree-l1"><a class="reference internal" href="voorbeelden.html">Voorbeelden</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Inleiding Databases</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Inleiding databases</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#voorbeeldtoepassing">Voorbeeldtoepassing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#opdrachten">Opdrachten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#toetsvragen">Toetsvragen</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="relationele-databases.html">Relationele databases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="database-ontwerp.html">Database-ontwerp</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nosql.html">NoSQL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linked-data.html">Linked data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="toetsvragen.html">Toetsvragen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nosql.html">NoSQL en Linked Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verdieping.html">Verdieping</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Begrippenlijst</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voordedocent.html">Voor de docent</a></li>
 <li class="toctree-l1"><a class="reference internal" href="colofon.html">Colofon</a></li>
@@ -113,7 +101,7 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="voorbeelden.html" title="vorig hoofdstuk">Voorbeelden</a></li>
+      <li>Previous: <a href="voorwoord.html" title="vorig hoofdstuk">Voorwoord</a></li>
       <li>Next: <a href="relationele-databases.html" title="volgend hoofdstuk">Relationele databases</a></li>
   </ul></li>
 </ul>
@@ -145,57 +133,51 @@
           <div class="body" role="main">
             
   <div class="section" id="inleiding-databases">
-<h1>Inleiding Databases<a class="headerlink" href="#inleiding-databases" title="Permalink naar deze titel">¶</a></h1>
-<p>Mensen en organisaties gebruiken gegevens (data) bij het nemen van beslissingen en voor het uitvoeren van acties.</p>
-<blockquote>
-<div><p>Je gebruikt een lijst met contacten bij het sturen van een mail, om iemand op te bellen, of om een kaartje te sturen. Je gebruikt een agenda om te bepalen wat je vandaag of morgen moet doen. Je school gebruikt de cijferadministratie om te bepalen of je overgaat naar het volgende leerjaar - enz.</p>
-</div></blockquote>
-<p>Deze gegevens hebben een bestaansrecht onafhankelijk van de toepassingen die er nu gebruik van maken.
-Veel gegevens hebben betrekking op de wereld “buiten de computer” - en zijn van belang voor beslissingen in die wereld.
-Bovendien hebben deze gegevens vaak een erg lange levensduur:
-voor een organisatie misschien 10 jaar,
-voor personen enkele decennia,
-en voor historisch inzicht milennia.</p>
-<p>Databases zijn al zo oud als het schrift: ook voor de komst van de computer zijn er veel gegevens in databases georganiseerd.
-Het gebruik van computers maakt dat we anders met dit soort gegevens om kunnen gaan:</p>
+<h1>Inleiding databases<a class="headerlink" href="#inleiding-databases" title="Permalink naar deze titel">¶</a></h1>
+<p>Je gebruikt elke dag allerlei databases:</p>
 <ul class="simple">
-<li><p>we kunnen deze gegevens veel gemakkelijker delen met anderen, waardoor we ervoor kunnen zorgen dat iedereen op elk moment de juiste gegevens heeft;</p></li>
-<li><p>we kunnen veel gemakkelijker met grote verzamelingen gegevens werken;</p></li>
-<li><p>we kunnen met veel complexere gegevens werken;</p></li>
-<li><p>we kunnen veel sneller beslissingen nemen - op basis van actuele gegevens.</p></li>
+<li><p>je bekijkt je bankrekening via de bank-app, en je maakt een bedrag over:
+hierbij gebruik je de database van de bank met al je overboekingen (transacties).</p></li>
+<li><p>je houdt de administratie bij van je sportvereniging, met daarin de namen en adressen van de leden,
+de contributie, en de wedstrijdresultaten;</p></li>
+<li><p>je zoekt op welke cijfers je gehaald hebt voor geschiedenis, dit schooljaar.
+Hierbij gebruik je (via een web-app) de database met de cijferadministratie van je school.</p></li>
+<li><p>je maakt een afspraak in een agenda die je deelt met je familie.
+Via deze agenda weet je welke familie-activiteiten gepland zijn.</p></li>
 </ul>
-<p>Bij het bovenstaande speelt <em>database-technologie</em> een belangrijke rol.
-Deze biedt onder andere de volgende mogelijkheden:</p>
+<p>Dit is maar een kleine greep uit de database-toepassingen waar je dagelijks mee te maken hebt.</p>
+<p>De databases in deze toepassingen hebben een aantal eigenschappen:</p>
 <ul class="simple">
-<li><p>meerdere gebruikers tegelijk;</p></li>
-<li><p>gebruik op afstand (via het internet);</p></li>
-<li><p>zoeken in en samenvatten van (zeer) grote verzamelingen gegevens;</p></li>
-<li><p>werken met complexe gegevens;</p></li>
-<li><p>snel en consistent verwerken van aanpassingen van gegevens (“transacties”).</p></li>
+<li><p>het gaat om verzamelingen gestructureerde gegevens;</p></li>
+<li><p>het gaat mogelijk om erg grote verzamelingen gegevens;</p></li>
+<li><p>je kunt de gegevens op allerlei manieren doorzoeken;</p></li>
+<li><p>de gegevens worden door veel gebruikers geraadpleegd, vaak gelijktijdig;</p></li>
+<li><p>soms worden dezelfde gegevens door verschillende toepassingen gebruikt;</p></li>
+<li><p>de gegevens worden vaak gebruikt voor het nemen van beslissingen.</p></li>
 </ul>
-<p>Database-technologie staat niet op zichzelf, maar wordt steeds meer in combinatie met andere technologiëen gebruikt:</p>
-<ul class="simple">
-<li><p>het internet is essentieel voor het gebruik van databases op afstand;</p></li>
-<li><p>het internet of things vormt een belangrijke bron van actuele gegevens over de “wereld”;
-dit levert zulke grote hoeveelheden gegevens dat database-technologie daarvoor essentieel is;</p></li>
-<li><p>data analytics en artificial intelligence zijn in staat om in zeer grote hoeveelheden gegevens (“big data”) patronen, structuren en betekenis te ontdekken - waarmee betere besluiten genomen kunnen worden;</p></li>
-<li><p>het web is een belangrijke bron van gegevens (bijvoorbeeld “click data”);</p></li>
-<li><p>voor het web zijn databases essentieel: van de grote databases voor zoekmachines en andere algoritmen van Google en Facebook, via de databaes van Wikipedia, tot de databases die gebruikt worden door webwinkels, bloggers, en andere websites.</p></li>
-</ul>
-<p>Databases zijn in het begin vooral gebruikt voor de administratie van organisaties.
-Tegenwoordig spelen databases op veel meer gebieden een grote rol.
-In bijna alle wetenschapsgebeiden vormen data en <em>data science</em> een belangrijk middel;
-databases vormen daarvoor een essentiële bouwsteen.</p>
-<p><strong>Consistentie en integriteit.</strong> Zoals gezegd hebben de gegevens in een database betrekking op een bepaalde “wereld” - bijvoorbeeld een organisatie in relatie tot zijn omgeving.
-Het is dan belangrijk dat de gegevens in de database overeenkomen met de toestand van die wereld.
-We spreken dan over <em>integriteit</em> van de data.
-Anders gezegd: bij <em>integriteit</em> gaat het erom of de data “waar” zijn.</p>
-<p>Een basisvoorwaarde daarvoor is dat de data in de database elkaar niet tegenspreken. De data moet <em>consistent</em> zijn.
-Als je een bepaald basisgegeven op meerdere plekken in de database opslaat, en je moet een verandering van dit gegeven verwerken, dan kan het lastig zijn om deze consistentie op elk moment te garanderen.
-Het is voor de consistentie dan handiger om basisgegevens op één plek op te slaan.
-Bij het database-ontwerp proberen we daarom een <em>genormaliseerd</em> (niet-redundant) model te maken.
-Ook het gebruik van <em>afgeleide gegevens</em> die gebaseerd zijn op veranderlijke basisgegevens is een vorm van redundantie die consistente veranderingen lastig maakt.</p>
-<p>Bij het ontwerpen van een fysieke database offeren we soms consistentie tijdelijk op, om sneller toegang tot de data te kunnen krijgen.</p>
+<p><strong>Gestructureerde gegevens.</strong> Een database bevat gegevens die dezelfde vorm en structuur hebben.
+Deze geef je vaak in een tabelvorm weer - denk aan een spreadheet, een agenda, of een boekhoudjournaal.</p>
+<p><strong>Flexibel doorzoeken.</strong> Je kunt op allerlei manieren zoeken in je lijst met overboekingen,
+bijvoorbeeld om na te gaan hoeveel je aan kleding uitgegevens hebt het afgelopen jaar.
+Je kunt opzoeken welke cijfers je voor wiskunde gehaald hebt, of voor welke vakken je onvoldoendes gehaald hebt.</p>
+<p><strong>Meerdere gebuikers, soms tegelijkertijd.</strong>
+Je bankgegevens,
+je cijfers of je gedeelde agenda kunnen ook door anderen bekeken worden,
+mogelijk op hetzelfde moment.
+Als iemand deze gegevens verandert, dan wil je dat ook direct kunnen zien.</p>
+<p><strong>Grote verzamelingen gegevens.</strong>
+De administratie van een sportvereniging met 20 leden kun je nog op papier bijhouden,
+of in een spreadsheet.
+Maar bij veel toepassingen gaat het om duizenden of miljoenen gegevens,
+van evenzoveel gebruikers. Je wilt dan nog steeds snel kunnen zoeken.</p>
+<p><strong>Gegevens voor beslissingen.</strong>
+De gegevens van je bankrekening vertellen je welke financiële speelruimte je de komende tijd hebt;
+of waar je de meeste mogelijkheden hebt om te bezuinigen.
+De afspraken in je agenda vertellen je hoe de komende dagen er (in grote lijnen) uitzien,
+en wat er van je verwacht wordt.
+De contributiegegevens van je vereniging gebruik je voor het versturen van rekeningen en misschien van aanmaningen.
+In al deze voorbeelden gebruik je de gegevens uit de database voor het nemen van beslissingen,
+of voor het uitvoeren van een “proces” zoals het innen van contributie.</p>
 <div class="section" id="voorbeeldtoepassing">
 <h2>Voorbeeldtoepassing<a class="headerlink" href="#voorbeeldtoepassing" title="Permalink naar deze titel">¶</a></h2>
 <p>Als voorbeeld gebruiken we een (web)toepassing waarmee gebruikers zich kunnen inschrijven voor verschillende events - zoals bijvoorbeeld schaakwedstrijden.
@@ -206,8 +188,7 @@ Een lid kan zijn/haar inschrijvingen achteraf aanpassen.
 Een event-organisator kan een overzicht krijgen van de inschrijvingen voor een event.</p>
 <p>De verschillende events zijn met hun gegevens (datum, maaltijdkeuze) “hard gecodeerd” in de toepassing.
 (Deze hoeven niet in de database opgenomen te worden.)</p>
-<div class="section" id="web-applicatie">
-<h3>Web-applicatie<a class="headerlink" href="#web-applicatie" title="Permalink naar deze titel">¶</a></h3>
+<p class="rubric">Web-applicatie</p>
 <p>Een uitwerking van dit voorbeeld is te vinden op glitch.com:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://glitch.com/~succulent-colon">project</a> en</p></li>
@@ -216,14 +197,23 @@ Een event-organisator kan een overzicht krijgen van de inschrijvingen voor een e
 <p>Je kunt daar de database-operaties vinden als onderdeel van een Python-Flask web-applicatie.
 Je kunt op glitch.com een eigen “remix” maken van deze toepassing, met eigen uitbreidingen en variaties.</p>
 </div>
-</div>
 <div class="section" id="opdrachten">
 <h2>Opdrachten<a class="headerlink" href="#opdrachten" title="Permalink naar deze titel">¶</a></h2>
-<p><strong>Opdracht INL-1</strong></p>
-<p>Geef tenminste 3 voorbeelden van databases uit je eigen omgeving.
-(Dit mogen ook niet-gecomputeriseerde databases zijn.)
-Geef tenminste 3 voorbeelden van toepassingen waarin waarin mogelijk een database gebruikt wordt/zinvol is.
-Motiveer je antwoord.</p>
+<ul class="simple">
+<li><p>Geef drie voorbeelden van toepassingen uit je omgeving waarin databases gebruikt worden;
+geef daarbij aan welk soort gegevens in de database opgeslagen wordt.</p></li>
+<li><p>Geef voor één van die voorbeelden aan  welke van de bovengenoemde elementen een rol spelen, en op welke manier.</p></li>
+</ul>
+</div>
+<div class="section" id="toetsvragen">
+<h2>Toetsvragen<a class="headerlink" href="#toetsvragen" title="Permalink naar deze titel">¶</a></h2>
+<p>Welke van de onderstaande elementen zijn typisch voor een <em>database</em> (en kom je niet bij andere programma’s tegen)?</p>
+<ul class="simple">
+<li><p>gegevens blijven bewaard (“persistent”) als het programma niet meer actief is;</p></li>
+<li><p>opslaan en terugzoeken van gestructureerde gegevens;</p></li>
+<li><p>zoeken in mogelijk grote verzamelingen gestructureerde gegevens;</p></li>
+<li><p>gegevens zijn in tabelvorm opgeslagen;</p></li>
+</ul>
 </div>
 </div>
 
@@ -239,11 +229,11 @@ Motiveer je antwoord.</p>
       &copy;2019, SLO.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
-      <a href="_sources/inleiding.md.txt"
+      <a href="_sources/inleiding.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

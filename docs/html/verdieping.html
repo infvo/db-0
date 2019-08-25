@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
   <head>
     <meta charset="utf-8" />
-    <title>Toetsvragen &#8212; Databases-0 0.1 documentatie</title>
+    <title>Verdieping &#8212; Databases-0 0.1 documentatie</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/accessibility.css?v=808B982A" />
@@ -36,21 +36,10 @@
     <script type="text/javascript" src="_static/reveal.js?v=9C3AAF60"></script>
     <script type="text/javascript" src="_static/tabbedstuff.js?v=5BE6106"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
-    <script type="text/javascript" src="_static/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/waypoints.min.js"></script>
-    <script type="text/javascript" src="_static/rangy-core.js"></script>
-    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
-    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
-    <script type="text/javascript" src="_static/user-highlights.js"></script>
-    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
-    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
-    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
-    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Zoeken" href="search.html" />
     <link rel="next" title="Begrippenlijst" href="glossary.html" />
-    <link rel="prev" title="Linked data" href="linked-data.html" />
+    <link rel="prev" title="Linked Data" href="nosql/linked-data.html" />
 
 <script type="text/javascript">
   eBookConfig = {};
@@ -93,17 +82,14 @@
 <h3>Navigatie</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="voorwoord.html">Voorwoord</a></li>
-<li class="toctree-l1"><a class="reference internal" href="voorbeelden.html">Voorbeelden</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inleiding.html">Inleiding Databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inleiding.html">Inleiding databases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="relationele-databases.html">Relationele databases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="database-ontwerp.html">Database-ontwerp</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nosql.html">NoSQL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linked-data.html">Linked data</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Toetsvragen</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#inleiding">Inleiding</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#relationele-databases">Relationele databases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#database-ontwerp">Database-ontwerp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#nosql-databases-en-linked-data">NoSQL-databases en Linked data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nosql.html">NoSQL en Linked Data</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Verdieping</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">SQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Database-ontwerp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">NoSQL en Linked Data</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Begrippenlijst</a></li>
@@ -115,7 +101,7 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="linked-data.html" title="vorig hoofdstuk">Linked data</a></li>
+      <li>Previous: <a href="nosql/linked-data.html" title="vorig hoofdstuk">Linked Data</a></li>
       <li>Next: <a href="glossary.html" title="volgend hoofdstuk">Begrippenlijst</a></li>
   </ul></li>
 </ul>
@@ -146,35 +132,31 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="toetsvragen">
-<h1>Toetsvragen<a class="headerlink" href="#toetsvragen" title="Permalink naar deze titel">¶</a></h1>
-<div class="section" id="inleiding">
-<h2>Inleiding<a class="headerlink" href="#inleiding" title="Permalink naar deze titel">¶</a></h2>
+  <div class="section" id="verdieping">
+<h1>Verdieping<a class="headerlink" href="#verdieping" title="Permalink naar deze titel">¶</a></h1>
+<p>Voor de verdieping kun je uit drie onderdelen kiezen:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://sql.informaticavo.nl/">SQL</a></p></li>
+<li><p><a class="reference external" href="https://creatief.github.io/">Database-ontwerp</a></p></li>
+<li><p><a class="reference external" href="https://infvo.github.io/nosql-ld">NoSQL en Linked Data</a></p></li>
+</ul>
+<div class="section" id="id1">
+<h2>SQL<a class="headerlink" href="#id1" title="Permalink naar deze titel">¶</a></h2>
+<p>Het SQL-onderdeel is voor iedereen geschikt.
+Het materiaal is voor het grootste deel als zelfstudie te volgen.
+Iedereen die met databases aan de slag wil heeft deze kennis nodig.</p>
 </div>
-<div class="section" id="relationele-databases">
-<h2>Relationele databases<a class="headerlink" href="#relationele-databases" title="Permalink naar deze titel">¶</a></h2>
-
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-multipleanswers="true"  id="vraag-RDB-1">
-            <p>Q-1: Hoe identificeer je de rijen en kolommen van een tabel in een relationele database?</p>
-
-            <li data-component="answer" data-correct id="vraag-RDB-1_opt_a">geef je de kolommen namen</li><li data-component="feedback" id="vraag-RDB-1_opt_a">en een rij identificeer je met een key</li>
-            
-            <li data-component="answer"  id="vraag-RDB-1_opt_b">geef je de rijen namen</li><li data-component="feedback" id="vraag-RDB-1_opt_b">Je geeft de kolommen namen; een rij identificeer je met een key</li>
-            
-            <li data-component="answer" data-correct id="vraag-RDB-1_opt_c">identificeer je de rijen met unieke keys</li><li data-component="feedback" id="vraag-RDB-1_opt_c">en je geeft de kolommen namen</li>
-            
-            <li data-component="answer"  id="vraag-RDB-1_opt_d">nummer je de rijen altijd opeenvolgend</li><li data-component="feedback" id="vraag-RDB-1_opt_d">Je geeft de kolommen namen; een rij identificeer je met een key</li>
-            
-
-            </ul>
-            </div>
-            </div>
-<div class="section" id="database-ontwerp">
-<h2>Database-ontwerp<a class="headerlink" href="#database-ontwerp" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="id2">
+<h2>Database-ontwerp<a class="headerlink" href="#id2" title="Permalink naar deze titel">¶</a></h2>
+<p>Voor database-ontwerp heb je een goede kennis van SQL/relationele databases nodig.
+Database-ontwerp is een uitdagend onderdeel: het vraagt het nodige abstractie-vermogen.
+Bovendien heb je hierbij een docent nodig die de materie beheerst.
+Kennis van database-ontwerp heb je nodig als je een niet-triviale database (met meer dan 5 tabellen) wilt ontwerpen voor een eigen toepassing.</p>
 </div>
-<div class="section" id="nosql-databases-en-linked-data">
-<h2>NoSQL-databases en Linked data<a class="headerlink" href="#nosql-databases-en-linked-data" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="id3">
+<h2>NoSQL en Linked Data<a class="headerlink" href="#id3" title="Permalink naar deze titel">¶</a></h2>
+<p>Voor het NoSQL/Linked Data deel is kennis van SQL/relationele databases nodig.
+Je hebt daarnaast een docent nodig die de stof beheerst.</p>
 </div>
 </div>
 
@@ -190,11 +172,11 @@
       &copy;2019, SLO.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
-      <a href="_sources/toetsvragen.rst.txt"
+      <a href="_sources/verdieping.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

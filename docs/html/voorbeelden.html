@@ -36,17 +36,6 @@
     <script type="text/javascript" src="_static/reveal.js?v=9C3AAF60"></script>
     <script type="text/javascript" src="_static/tabbedstuff.js?v=5BE6106"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
-    <script type="text/javascript" src="_static/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/waypoints.min.js"></script>
-    <script type="text/javascript" src="_static/rangy-core.js"></script>
-    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
-    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
-    <script type="text/javascript" src="_static/user-highlights.js"></script>
-    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
-    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
-    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
-    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Zoeken" href="search.html" />
     <link rel="next" title="Inleiding Databases" href="inleiding.html" />
@@ -94,6 +83,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="voorwoord.html">Voorwoord</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Voorbeelden</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#voorbeeldtoepassing">Voorbeeldtoepassing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#opdrachten">Opdrachten</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#toetsvragen">Toetsvragen</a></li>
 </ul>
@@ -101,9 +91,8 @@
 <li class="toctree-l1"><a class="reference internal" href="inleiding.html">Inleiding Databases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="relationele-databases.html">Relationele databases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="database-ontwerp.html">Database-ontwerp</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nosql.html">NoSQL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linked-data.html">Linked data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="toetsvragen.html">Toetsvragen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nosql.html">NoSQL en Linked Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verdieping.html">Verdieping</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Begrippenlijst</a></li>
 <li class="toctree-l1"><a class="reference internal" href="voordedocent.html">Voor de docent</a></li>
 <li class="toctree-l1"><a class="reference internal" href="colofon.html">Colofon</a></li>
@@ -190,6 +179,27 @@ en wat er van je verwacht wordt.
 De contributiegegevens van je vereniging gebruik je voor het versturen van rekeningen en misschien van aanmaningen.
 In al deze voorbeelden gebruik je de gegevens uit de database voor het nemen van beslissingen,
 of voor het uitvoeren van een “proces” zoals het innen van contributie.</p>
+<div class="section" id="voorbeeldtoepassing">
+<h2>Voorbeeldtoepassing<a class="headerlink" href="#voorbeeldtoepassing" title="Permalink naar deze titel">¶</a></h2>
+<p>Als voorbeeld gebruiken we een (web)toepassing waarmee gebruikers zich kunnen inschrijven voor verschillende events - zoals bijvoorbeeld schaakwedstrijden.
+Een deelnemer moet zich eerst als lid aanmelden, met voornaam, achternaam en email.
+Een aangemeld lid kan zich bij verschillende events (op verschillende data) inschrijven.
+Bij inschrijving maakt een lid een keuze uit de verschillende maaltijden bij deze event.
+Een lid kan zijn/haar inschrijvingen achteraf aanpassen.
+Een event-organisator kan een overzicht krijgen van de inschrijvingen voor een event.</p>
+<p>De verschillende events zijn met hun gegevens (datum, maaltijdkeuze) “hard gecodeerd” in de toepassing.
+(Deze hoeven niet in de database opgenomen te worden.)</p>
+<div class="section" id="web-applicatie">
+<h3>Web-applicatie<a class="headerlink" href="#web-applicatie" title="Permalink naar deze titel">¶</a></h3>
+<p>Een uitwerking van dit voorbeeld is te vinden op glitch.com:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://glitch.com/~succulent-colon">project</a> en</p></li>
+<li><p><a class="reference external" href="https://succulent-colon.glitch.me">live toepassing</a>.</p></li>
+</ul>
+<p>Je kunt daar de database-operaties vinden als onderdeel van een Python-Flask web-applicatie.
+Je kunt op glitch.com een eigen “remix” maken van deze toepassing, met eigen uitbreidingen en variaties.</p>
+</div>
+</div>
 <div class="section" id="opdrachten">
 <h2>Opdrachten<a class="headerlink" href="#opdrachten" title="Permalink naar deze titel">¶</a></h2>
 <ul class="simple">
@@ -222,7 +232,7 @@ geef daarbij aan welk soort gegevens in de database opgeslagen wordt.</p></li>
       &copy;2019, SLO.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

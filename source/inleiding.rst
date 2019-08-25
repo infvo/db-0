@@ -1,6 +1,6 @@
-***********
-Voorbeelden
-***********
+*******************
+Inleiding databases
+*******************
 
 Je gebruikt elke dag allerlei databases:
 
@@ -51,6 +51,29 @@ en wat er van je verwacht wordt.
 De contributiegegevens van je vereniging gebruik je voor het versturen van rekeningen en misschien van aanmaningen.
 In al deze voorbeelden gebruik je de gegevens uit de database voor het nemen van beslissingen,
 of voor het uitvoeren van een "proces" zoals het innen van contributie.
+
+Voorbeeldtoepassing
+===================
+
+Als voorbeeld gebruiken we een (web)toepassing waarmee gebruikers zich kunnen inschrijven voor verschillende events - zoals bijvoorbeeld schaakwedstrijden.
+Een deelnemer moet zich eerst als lid aanmelden, met voornaam, achternaam en email.
+Een aangemeld lid kan zich bij verschillende events (op verschillende data) inschrijven.
+Bij inschrijving maakt een lid een keuze uit de verschillende maaltijden bij deze event.
+Een lid kan zijn/haar inschrijvingen achteraf aanpassen.
+Een event-organisator kan een overzicht krijgen van de inschrijvingen voor een event.
+
+De verschillende events zijn met hun gegevens (datum, maaltijdkeuze) "hard gecodeerd" in de toepassing.
+(Deze hoeven niet in de database opgenomen te worden.)
+
+.. rubric:: Web-applicatie
+
+Een uitwerking van dit voorbeeld is te vinden op glitch.com:
+
+* `project <https://glitch.com/~succulent-colon>`_ en
+* `live toepassing <https://succulent-colon.glitch.me>`_.
+
+Je kunt daar de database-operaties vinden als onderdeel van een Python-Flask web-applicatie.
+Je kunt op glitch.com een eigen "remix" maken van deze toepassing, met eigen uitbreidingen en variaties.
 
 Opdrachten
 ==========

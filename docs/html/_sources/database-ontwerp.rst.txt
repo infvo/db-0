@@ -13,3 +13,5 @@ Database-ontwerp
 
   ontwerp/logisch-model.rst
   ontwerp/fysiek-model.rst
+  ontwerp/toetsvragen.rst
+  
